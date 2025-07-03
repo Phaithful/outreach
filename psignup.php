@@ -50,7 +50,7 @@
 
                     
 
-            <div class="form col-12">>
+            <div class="form col-12">
 
                 <div class="details">
                     <div class="hero-message">
