@@ -293,6 +293,10 @@ label{
   position: relative;
 }
 
+.cpassword_div{
+  position: relative;
+}
+
 
 .eye-icon {
     position: absolute;

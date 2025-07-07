@@ -274,9 +274,8 @@ label{
 
   .form_cont h6{
     color: var(--light);
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 0.95rem;
+    font-weight: 500;
   }
 
   .form_cont h1{
@@ -293,9 +292,7 @@ label{
   position: relative;
 }
 
-.cpassword_div{
-  position: relative;
-}
+
 
 
 .eye-icon {

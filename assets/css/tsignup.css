@@ -91,14 +91,14 @@ main{
 
 .form_cont h6{
   color: var(--light);
-  font-size: 1.4rem;
-  font-weight: 600;             
+  font-size: 1.4rem;             
   letter-spacing: 1px;
 }
 
 .form_cont h1{
   color: var(--secondary);
   font-size: 2.5rem;
+  font-weight: 600;
 }
 
 .form_cont a{
@@ -247,9 +247,8 @@ label{
 
   .form_cont h6{
     color: var(--light);
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-size: 0.95rem;
+    font-weight: 500;
   }
 
   .form_cont h1{
@@ -263,6 +262,10 @@ label{
 }
 
 .password_div{
+  position: relative;
+}
+
+.cpassword_div{
   position: relative;
 }
 

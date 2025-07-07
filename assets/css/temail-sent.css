@@ -63,31 +63,7 @@ section{
   padding: 0.5rem 1rem;
 }
 
-.urgent{
-    color: var(--primary)!important;
-    background-color: var(--dark)!important;
-    padding: 5px 20px !important;
-    margin-right: 10px;
-}
 
-.urgent:hover{
-  background-color: var(--light) !important;
-}
-
-.urgent_div{
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 10px;
-}
-
-.urgent_div p {
-  color: var(--secondary);
-  font-size: 1.3rem !important;
-  letter-spacing: 1px;
-  margin: 0;
-  line-height: 1;
-}
 
 main{
   display: flex;
@@ -235,16 +211,13 @@ form{
 
 @media screen and (max-width: 765px) {
 
-  .urgent_div p {
-    display: none;
-  }
-
 }
 
 
 @media screen and (max-width: 575px) {
+  
   .navbar-brand p{
-    display: none;
+    font-size: 1.4rem;
   }
 
   .form_cont{

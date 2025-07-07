@@ -13,7 +13,7 @@
     <link rel="icon" href="images/white_logo.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
     
 
 
@@ -76,14 +76,6 @@
                             <input type="password" name="pass" placeholder="********" class="form-control" id="password" required>
                             <span class="eye-icon fas fa-thin fa-eye-slash" id="togglePassword"></span> 
                             <p style="color: red;"><?php echo $errors["pass"] ?></p>
-                        </div>
-
-                        <div class="mb-3 cpassword_div">
-                            <label for="cpassword" class="form-label">Confirm Password</label>
-                            <input type="password" name="cpass" placeholder="********" class="form-control" id="cpassword" required>
-                            <span class="eye-icon fas fa-thin fa-eye-slash" id="toggleCPassword"></span>
-                            <p style="color: red;"><?php echo $errors["cpass"] ?></p>
-
                         </div>
 
                         <div class="d-grid mt-3">
