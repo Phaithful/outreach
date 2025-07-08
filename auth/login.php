@@ -8,7 +8,7 @@ $errors = array("email" => "", "pass" => "", "cpass" => "");
 if ($_SERVER["REQUEST_METHOD"] === "POST" &&  isset($_POST["v_submit"]) || isset($_POST["t_submit"]) ) {
     $mail = htmlspecialchars($_POST["email"]);
     $pass = htmlspecialchars($_POST["pass"]);
-    $cpass = htmlspecialchars($_POST["cpass"]);
+    // $cpass = htmlspecialchars($_POST["cpass"]);
     //validations
     if (empty($mail)){
         $errors["email"] = "Please insert email";
@@ -19,12 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" &&  isset($_POST["v_submit"]) || isset
     elseif (strlen($pass) < 8 || !preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d\W_]+$/", $pass)){
         $errors["pass"] = "Your password must be <br>  ...More than eight characters <br> ...Must Contain bot uppercase and lowercase letters <br> ...Must contain numbers ";
     }
-    if (empty($cpass)){
-        $errors["pass"] = "Please insert email";
-    }
-    elseif ($cpass !== $pass) {
-        $errors["cpass"] = "The passwords dont match";
-    }
+    // if (empty($cpass)){
+    //     $errors["pass"] = "Please insert email";
+    // }
+    // elseif ($cpass !== $pass) {
+    //     $errors["cpass"] = "The passwords dont match";
+    // }
     if (!array_filter($errors)){
         $stmt = $conn -> prepare("SELECT id, role_id, name_tag, pass FROM users WHERE email = ? ");
         $stmt -> bind_param("s", $mail);

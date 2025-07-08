@@ -1,3 +1,5 @@
+<?php include "auth/forgot_password.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +57,12 @@
                     <h6>Enter Email to get Password Reset Code</h6>
                     <h1>Forgot your password<span class="colored">?</span></h1>
 
-                    <form action="" method="post" class=" w-100 w-md-75 w-lg-50 p-4 ">
+                    <form action="pforgot_password.php" method="post" class=" w-100 w-md-75 w-lg-50 p-4 ">
                         <div class="mb-3 email_div">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" name="email" placeholder="Enter email" class="form-control" required>
                             <span class="material-symbols-outlined mail_icon">mail</span>
+                            <p style="color: red;"><?php echo $errors["email"]?></p>
                         </div>
 
                         <div class="d-grid mt-3">

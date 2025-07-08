@@ -83,7 +83,7 @@
                         </div>
                     </form>
 
-                    <a href="#">Forgot Password?</a>
+                    <a href="pforgot_password.php">Forgot Password?</a>
                 </div>
 
             </div>

@@ -1,3 +1,5 @@
+<?php include "auth/verify-otp.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,13 +61,15 @@
                     <form action="" method="post" class=" w-100 w-md-75 w-lg-50 p-4 ">
 
                         <div class="inputs-div">
-                            <input type="text" class="otp" inputmode="numeric" maxlength="1" required>
-                            <input type="text" class="otp" inputmode="numeric" maxlength="1" required>
-                            <input type="text" class="otp" inputmode="numeric" maxlength="1" required>
-                            <input type="text" class="otp" inputmode="numeric" maxlength="1" required>
-                            <input type="text" class="otp" inputmode="numeric" maxlength="1" required>
-                            <input type="text" class="otp" inputmode="numeric" maxlength="1" required>
+                            <input type="text" class="otp" name ="otp_num[]" inputmode="numeric" maxlength="1" required>
+                            <input type="text" class="otp" name ="otp_num[]" inputmode="numeric" maxlength="1" required>
+                            <input type="text" class="otp" name ="otp_num[]" inputmode="numeric" maxlength="1" required>
+                            <input type="text" class="otp" name ="otp_num[]" inputmode="numeric" maxlength="1" required>
+                            <input type="text" class="otp" name ="otp_num[]" inputmode="numeric" maxlength="1" required>
+                            <input type="text" class="otp" name ="otp_num[]" inputmode="numeric" maxlength="1" required>
+                            
                         </div>
+                        <p style=" text-align:center; color: red;"><?php echo $errors["otp"]?></p>
 
                         <div style="display: flex; justify-content: center; align-items: center;">
                             <button id="clearOtp" class="btn btn-outline-secondary clear-btn">Clear Code</button>

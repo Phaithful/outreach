@@ -1,4 +1,4 @@
-<?php //include "auth/sign_up.php" ?>
+<?php include "auth/sign_up.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,18 +63,18 @@
                     <h6>JOIN OUTREACH TODAY</h6>
                     <h1>Create a new account<span class="colored">.</span></h1>
 
-                    <form action="" method="post" class=" w-100 w-md-75 w-lg-50 p-4 ">
+                    <form action="auth/sign_up.php" method="post" class=" w-100 w-md-75 w-lg-50 p-4 ">
                         <div class="mb-3 email_div">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" name="email" placeholder="Enter email" class="form-control" required value="<?php //echo htmlspecialchars($mail)?>">
-                            <p style="color: red;"><?php //echo $errors["email"]?></p>
+                            <p style="color: red;"><?php echo $errors["email"]?></p>
                             <span class="material-symbols-outlined mail_icon">mail</span>
                         </div>
 
                         <div class="mb-3 password_div">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" name="pass" placeholder="********" class="form-control" id="password" required>
-                            <p style="color: red;"><?php //echo $errors["pass"]?></p>
+                            <p style="color: red;"><?php echo $errors["pass"]?></p>
                             <span class="eye-icon fas fa-thin fa-eye-slash" id="togglePassword"></span> 
                         </div>
 
@@ -82,7 +82,7 @@
                             <label for="cpassword" class="form-label">Confirm Password</label>
                             <input type="password" name="cpass" placeholder="********" class="form-control" id="cpassword" required>
                             <span class="eye-icon fas fa-thin fa-eye-slash" id="toggleCPassword"></span>
-                            <p style="color: red;"><?php //echo $errors["cpass"] ?></p>
+                            <p style="color: red;"><?php echo $errors["cpass"] ?></p>
 
                         </div>
 
@@ -91,7 +91,7 @@
                         </div>
                     </form>
 
-                    <p>already a member? <a href="#">Log In</a></p>
+                    <p>already a member? <a href="plogin.php">Log In</a></p>
                 </div>
 
             </div>
