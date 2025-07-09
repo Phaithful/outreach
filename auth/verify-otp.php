@@ -5,10 +5,7 @@ session_start();
 $errors = array("otp" => "");
 
 
-$email = null;
-if (isset($_GET["email"])){
-    $email = htmlspecialchars($_GET["email"]);
-}
+$email = $_SESSION["email"];
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["v_submit"]) ){
 

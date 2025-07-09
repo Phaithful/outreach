@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"  &&   isset($_POST["t_submit"]) || iss
         if (isset($_POST["t_submit"])){
             $stmt = $conn -> prepare("INSERT INTO users(role_id, name_tag, email, pass) VALUES(?,?,?,?) ");
             $role_id =2;
-            $username = "User". random_int(1000,9999);
+            $username = "Therapist". random_int(1000,9999);
             $stmt -> bind_param("isss", $role_id, $username, $mail, $pass_hash );
             if ($stmt -> execute()){
                 $_SESSION["username"] = $username;

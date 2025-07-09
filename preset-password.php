@@ -1,4 +1,4 @@
-<?php include "auth/forgot_password.php" ?>
+<?php include "auth/reset.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">

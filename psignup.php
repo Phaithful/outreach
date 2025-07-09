@@ -63,7 +63,7 @@
                     <h6>JOIN OUTREACH TODAY</h6>
                     <h1>Create a new account<span class="colored">.</span></h1>
 
-                    <form action="auth/sign_up.php" method="post" class=" w-100 w-md-75 w-lg-50 p-4 ">
+                    <form action="" method="post" class=" w-100 w-md-75 w-lg-50 p-4 ">
                         <div class="mb-3 email_div">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" name="email" placeholder="Enter email" class="form-control" required value="<?php //echo htmlspecialchars($mail)?>">

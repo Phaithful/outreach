@@ -55,7 +55,7 @@
 
                 <div class="form_cont container d-flex justify-content-center align-items-center">
                     <h1>Enter OTP code</h1>
-                    <h6>We sent a Code to <span class="colored">outreach.coree@gmail.com</span></h6>
+                    <h6>We sent a Code to <span class="colored"><?php echo $_SESSION["email"] ?></span></h6>
                     
 
                     <form action="" method="post" class=" w-100 w-md-75 w-lg-50 p-4 ">

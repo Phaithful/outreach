@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["v_submit"]) ) {
             <p>This will expire in 5 minutes. If you didn't request this, please ignore it.</p>";
             $mail -> send();
             
-            header("Location: ./pemail-sent.php?email" . urlencode($email) );
+            header("Location: ./pemail-sent.php" );
         }
         catch (Exception $e) {
             $errors['email'] = "ERROR! Email didnt send" . $mail -> ErrorInfo ;
@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["v_submit"]) ) {
         $conn -> close();
     }
     else {
-        $errors["email"] = "This Emai does not exist";
+        $errors["email"] = "This Email does not exist";
     }
 
 }

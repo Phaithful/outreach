@@ -3,12 +3,12 @@ include "./config/db.php";
 session_start();
 
 $errors = array("pass" => "", "cpass" => "");
-$pass = $cpass;
+$pass = $cpass = "";
 
 
-if (!isset($_SESSION["otp_verified_email"])) {
-    die("Unauthorized access. Please go through the forgot password process.");
-}
+// if (!isset($_SESSION["otp_verified_email"])) {
+//     die("Unauthorized access. Please go through the forgot password process.");
+// }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST"  &&   isset($_POST["t_submit"]) || isset($_POST["v_submit"]) ){
     $pass = htmlspecialchars($_POST["pass"]);
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"  &&   isset($_POST["t_submit"]) || iss
     if (empty($cpass)){
         $errors["cpass"] = "Enter a password";
     }
-    elseif ($cpass == $pass){
+    elseif (!$cpass == $pass){
         $errors["cpass"] = "Passwords dont match";
     }
 
@@ -36,7 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"  &&   isset($_POST["t_submit"]) || iss
             $role_id =2;
             $stmt -> bind_param("ss", $pass_hash, $mail );
             if ($stmt -> execute()){
-                $_SESSION["email"] = $mail;
+
+
                 $_SESSION["role"] = $role_id;
                 $_SESSION["user_id"] = $conn -> insert_id;
     
@@ -48,7 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"  &&   isset($_POST["t_submit"]) || iss
             $role_id = 3;
             $stmt -> bind_param("ss", $pass_hash, $mail );
             if ($stmt -> execute()){
-                $_SESSION["email"] = $mail;
                 $_SESSION["role"] = $role_id;
                 $_SESSION["user_id"] = $conn -> insert_id;
     
