@@ -9,17 +9,17 @@ $email = $_SESSION["email"];
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["v_submit"]) ){
 
+    $otp_array = array();
+
     if (isset($_POST["otp_num"]) && is_array($_POST["otp_num"])) {
         $otp_array = $_POST["otp_num"];
-    } else {
-        $otp_array = array();
     }
 
     if (!is_array($otp_array)) {
         $otp_array = [];
     }
 
-    $otp_num = htmlspecialchars(implode("", $otp_array));
+    $otp_num = htmlspecialchars(implode("", $otp_array));// gives you the otp in string format
 
     //errors
     if(empty($otp_num)){
