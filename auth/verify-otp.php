@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["v_submit"]) ){
         $save -> execute();
         $save -> store_result();
     
-        if ($save -> num_rows() == 1){
+        if ($save -> num_rows() > 0){
             $save -> bind_result($saved_otp, $exp_otp);
             $save -> fetch();
             // SET current time so that your code will know the current time and check how far it is from normal time

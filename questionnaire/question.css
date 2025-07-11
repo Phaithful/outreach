@@ -1,0 +1,206 @@
+
+:root{
+    --primary: #E0E1DD;
+    --secondary: #0D1B2A ;
+    --dark: #1B263B;
+    --light: #5d738f;
+    --mid: #1B263B;
+    --green: rgb(22, 147, 68);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Comfortaa", sans-serif;
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+
+@keyframes expandWave {
+  0% {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+  background-color: white !important ;
+  background: white !important; 
+  box-shadow: 0 3px 8px 0 var(--light);
+  border: none;
+  animation: IntFromTop 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+
+.navbar-brand{
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px;
+}
+
+.navbar-brand img {
+  width: 30px !important;
+  height: auto;
+}
+
+.navbar-brand p{
+  font-family: "Comfortaa", sans-serif;
+  color: black !important;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-top: 12px;
+  margin-left: 10px;
+}
+
+
+.urgent{
+    color: white ;
+    font-weight: 500;
+    background: linear-gradient(71deg,rgb(218, 99, 158) 0%, rgb(218, 51, 131) 100%);
+    padding: 5px 20px !important;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 50px;
+    transition: all 300ms ease-in-out !important;
+}
+
+.urgent:hover{
+  color: white;
+  padding: 5px 35px !important;
+  background: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
+}
+
+.urgent span{
+  transition: all 300ms ease-in-out !important;
+}
+
+.urgent:hover span{
+  transform: rotate(45deg);
+}
+
+.urgent_div{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px;
+}
+
+.urgent_div p {
+  color: white;
+  font-size: 1.3rem !important;
+  letter-spacing: 1px;
+  margin: 0;
+  line-height: 1;
+}
+
+.login{
+  border: solid 2px rgb(194, 26, 107);
+  font-size: 1rem !important;
+  padding: 0.2rem 1rem;
+  transition: all 300ms ease-in-out !important;
+}
+
+.signup{
+  border: solid 2px rgb(194, 26, 107);
+  font-size: 1rem !important;
+  padding: 0.2rem 1rem;
+  transition: all 300ms ease-in-out !important;
+}
+
+.login:hover{
+  background: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
+  color: white;
+  padding: 0.2rem 2rem;
+}
+
+.signup:hover{
+  background: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
+  color: white;
+  padding: 0.2rem 2rem;
+}
+
+
+
+.white{
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.hands {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -3;
+}
+
+.hands img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+}
+
+
+.home{
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home h1{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 2.5rem;
+}
+         
+
+
+
+
+
+
+

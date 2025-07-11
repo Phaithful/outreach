@@ -55,7 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["v_submit"]) ) {
             <p>This will expire in 5 minutes. If you didn't request this, please ignore it.</p>";
             $mail -> send();
             
+<<<<<<< Updated upstream
             header("Location: ./pemail-sent.php" );
+=======
+            header("Location: ./pemail-sent.php");
+>>>>>>> Stashed changes
         }
         catch (Exception $e) {
             $errors['email'] = "ERROR! Email didnt send" . $mail -> ErrorInfo ;
