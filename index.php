@@ -33,7 +33,7 @@
 
 
         
-            <div class="urgent_div">     
+            <div class="urgent_div">
                 <button class="btn urgent" id="urgentBtn" type="button">
                     <span class="material-symbols-outlined">call</span>
                     Talk to a Therapist

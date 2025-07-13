@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["v_submit"]) ) {
             $mail -> Host = "smtp.gmail.com" ;//shows the host is .gmail
             $mail -> SMTPAuth = true;
             $mail -> Username = "outreach.coree@gmail.com";
-            $mail -> Password = "bsxftdsosoxjntcn"; //gmail generated app password
+            $mail -> Password = "ogcqkzqppuzdgrus"; //gmail generated app password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //tls orr ssl
             $mail -> Port = "465"; //port 465 for ssl
 
@@ -55,11 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["v_submit"]) ) {
             <p>This will expire in 5 minutes. If you didn't request this, please ignore it.</p>";
             $mail -> send();
             
-<<<<<<< Updated upstream
             header("Location: ./pemail-sent.php" );
-=======
-            header("Location: ./pemail-sent.php");
->>>>>>> Stashed changes
         }
         catch (Exception $e) {
             $errors['email'] = "ERROR! Email didnt send" . $mail -> ErrorInfo ;

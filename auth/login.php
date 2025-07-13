@@ -2,7 +2,7 @@
 session_start();
 include "./config/db.php";
 $mail = $pass = "";
-$errors = array("email" => "", "pass" => "", "cpass" => "");
+$errors = array("email" => "", "pass" => "");
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" &&  isset($_POST["v_submit"]) || isset($_POST["t_submit"]) ) {
@@ -35,6 +35,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" &&  isset($_POST["v_submit"]) || isset
         if ($stmt -> num_rows  == 1){
             $stmt -> bind_result( $user_id, $role_id, $username,$saved_pass);
             $stmt -> fetch();
+
+            // if ($pass !== $saved_pass) {
+            //     $errors["pass"] = "You inputed the wrong password";
+            // }
             
             if (password_verify($pass, $saved_pass)) {
                 $_SESSION["username"] = $username;

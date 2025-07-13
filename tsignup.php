@@ -80,11 +80,11 @@
                         </div>
 
                         <div class="d-grid mt-3">
-                            <input type="submit" class="btn btn-primary submit" name="v_submit" value="Join Community">
+                            <input type="submit" class="btn btn-primary submit" name="t_submit" value="Join Community">
                         </div>
                     </form>
 
-                    <p>already a member? <a href="#">Log In</a></p>
+                    <p>already a member? <a href="tlogin.php">Log In</a></p>
                 </div>
 
             </div>

@@ -1,5 +1,5 @@
 <?php
-include "qauth/solution.php"
+include "qauth/resolve.php"
 ?>
 
 
@@ -74,7 +74,7 @@ include "qauth/solution.php"
             <form action="" method="post" class="container mt-5 p-4 rounded shadow bg-light" style="max-width: 700px;">
                 <div class="d-flex justify-content-center align-items-center header">
                     <span class="material-symbols-outlined">indeterminate_question_box</span>
-                    <h1 class="mb-4">Select Speciality</h1>
+                    <h1 class="mb-4">Please Kindly Indicate</h1>
                 </div>
                 <?php
                 // Fetch all problems from DB
@@ -82,7 +82,7 @@ include "qauth/solution.php"
                 ?>
 
                 <div class="mb-4">
-                    <label class="form-label fw-bold">What problems can you help with?</label>
+                    <label class="form-label fw-bold">What problems we can help you with?</label>
 
                     <div class="row">
                         <?php while ($issues = $problems->fetch_assoc()): ?>
@@ -103,7 +103,7 @@ include "qauth/solution.php"
                             </div>
                         <?php endwhile; ?>
                     </div>
-                        <p class="text-danger mt-1 t"><?php echo $errors['problems']; ?></p>
+                    <p class="text-danger mt-1 t"><?php echo $errors['problems']; ?></p>
                 </div>
 
                 <button type="submit" name="special" class="btn btn-primary w-100">Submit Application</button>
@@ -114,6 +114,8 @@ include "qauth/solution.php"
         </section>
 
     </section>
+
+    <script src="help.js" ></script>
 
 
 </body>
