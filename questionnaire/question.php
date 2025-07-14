@@ -42,17 +42,8 @@ include "qauth/questionnaire.php"
 
 
 
-            <div class="urgent_div">
-                <button class="btn urgent" id="urgentBtn" type="button">
-                    <span class="material-symbols-outlined">call</span>
-                    Talk to a Therapist
-                </button>
-            </div>
-
-
-            <div class="urgent_div">
-                <button class="btn login" type="button">Sign Up</button>
-                <button class="btn signup" type="button">Log In</button>
+            <div>
+                <button class="btn logout" type="button">Log Out</button>
             </div>
 
         </div>
@@ -70,38 +61,33 @@ include "qauth/questionnaire.php"
 
         <form method="post" action="" enctype="multipart/form-data" class="container mt-5 p-4 rounded shadow bg-light" style="max-width: 700px;">
             <div class=" header">
-                <span class="material-symbols-outlined">assignment_add</span>
-                <h1 class="mb-4">Questionnaire</h1>
+                <h1 class="mb-4"> Outreach <span>Questionnaire</span></h1>
             </div>
 
             <hr>
 
             <!-- Basic Info -->
             <div class="mb-3">
-                <label for="fullName" class="form-label">Full Name (One space between names ) </label>
-                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="JOHN DOE" required>
-                <p style="color: red;"> <?php echo $errors["fname"] ?> </p>
-            </div>
-
-            <div class="mb-3">
-                <label for="country" class="form-label">Country of Residence</label>
-                <input type="text" class="form-control" id="country" name="country" required>
-                <p style="color: red;"> <?php echo $errors["country"] ?> </p>
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" required>
             </div>
 
             <div class="row mb-3">
                 <div class="mb-3 col-md-6">
                     <label for="email" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="email" name="email" required value=" <?php echo $_SESSION["email"] ?> " readonly>
-                    <p style="color: red;"> <?php echo $errors["email"] ?> </p>
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
+
                 <div class="mb-3 col-md-6">
                     <label for="phone" class="form-label">Phone Number</label>
                     <input type="tel" class="form-control" id="phone" name="phone" required>
-                    <p style="color: red;"> <?php echo $errors["phone"] ?> </p>
                 </div>
             </div>
 
+            <div class="mb-3">
+                <label for="country" class="form-label">Country of Residence</label>
+                <input type="text" class="form-control" id="country" name="country" required>
+            </div>
 
             <!-- Qualification -->
             <div class="row mb-3">
@@ -168,10 +154,54 @@ include "qauth/questionnaire.php"
                 <input type="text" class="form-control" id="signature" name="signature" required>
             </div>
 
-            <button type="submit" name="submit" class="btn btn-primary w-100">Submit Application</button>
+            <button type="submit" name="submit" class="btn btn-primary w-100 submit_btn">
+                Submit Application
+                <span class="material-symbols-outlined">keyboard_capslock</span>
+            </button>
         </form>
 
     </section>
+
+
+    <footer class=" py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-3 mb-4 mb-md-0 logo-cont">
+                    <div class="logo">
+                        <img src="images/black_logo.png" alt="">
+                        <h4>Outreach</h4>
+                    </div>
+                    <p>Inspiring hope, facilitating healing, and empowering mental wellness journeys.</p>
+                </div>
+                <div class="col-12 col-md-3 mb-4 mb-md-0 service" >
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none" style="color: #a3a3a3">Private Therapy</a></li>
+                        <li><a href="#" class=" text-decoration-none" style="color: #a3a3a3">Crisis Support</a></li>
+                        <li><a href="#" class=" text-decoration-none" style="color: #a3a3a3">Audio Calls</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 mb-4 mb-md-0 support">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class=" text-decoration-none" style="color: #a3a3a3">FAQ</a></li>
+                        <li><a href="#" class=" text-decoration-none" style="color: #a3a3a3">Pricavy Policy</a></li>
+                        <li><a href="#" class=" text-decoration-none" style="color: #a3a3a3">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 contact">
+                    <h5>Stay Connected</h5>
+                    <p>Subscribe to our newsletter for updates.</p>
+                    <form>
+                    <input type="email" class="form-control mb-2" placeholder="Email address">
+                    <button type="submit" class="btn btn-outline-light w-100">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <p class="text-center mb-0">&copy; 2025 Outreach. All rights reserved. Your mental health matters. You are not alone.</p>
+        </div>
+    </footer>
 
 
 </body>

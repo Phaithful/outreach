@@ -1,15 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // const gradients = [
-    // ['rgba(154, 213, 153, 1)', 'rgba(255, 255, 255, 0.2)'],
-    // ['rgba(129, 182, 193, 0.6)', 'rgba(255, 255, 255, 0.2)'],
-    // ['rgba(157, 151, 199, 0.6)', 'rgba(255, 255, 255, 0.2)'],
-    // ['rgba(174, 134, 185, 0.6)', 'rgba(255, 255, 255, 0.2)'],
-    // ['rgba(195, 145, 182, 0.6)', 'rgba(255, 255, 255, 0.2)']
-    // ];
-
-
     // Click ripple interaction
     document.addEventListener('click', (e) => {
         const ripple = document.createElement('div');
@@ -22,52 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(ripple);
         setTimeout(() => ripple.remove(), 1000);
     });
-
-
-
-    // function createRandomRipple() {
-    //     const ripple = document.createElement('div');
-
-    //     ripple.className = 'click-ripple';
-
-    //     // Generate a random position within the viewport
-    //     const x = Math.random() * window.innerWidth;
-    //     const y = Math.random() * window.innerHeight;
-
-
-    //     ripple.style.left = `${x}px`;
-    //     ripple.style.top = `${y}px`;
-
-
-    //     document.body.appendChild(ripple);
-
-    //     // Remove the ripple after it fades out
-    //     setTimeout(() => ripple.remove(), 1000);
-    // }
-
-    // function createRandomSRipple() {
-    //     const sripple = document.createElement('div');
-
-    //     sripple.className = 'sclick-ripple'
-
-    //     // Generate a random position within the viewport
-
-    //     const x2 = Math.random() * window.innerWidth;
-    //     const y2 = Math.random() * window.innerHeight;
-
-    //     sripple.style.left = `${x2}px`;
-    //     sripple.style.top = `${y2}px`;
-
-    //     document.body.appendChild(sripple);
-
-    //     // Remove the ripple after it fades out
-    //     setTimeout(() => sripple.remove(), 1000)
-        
-    // }
-
-    // // Call the function every 2 seconds (or adjust timing)
-    // setInterval(createRandomRipple, 1200);
-    // setInterval(createRandomSRipple, 1900)
 
 
 
@@ -95,6 +40,150 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     observer.observe(document.querySelector(".mission"));
+
+
+
+
+    // Swiper Js
+    const swiper = new Swiper(".partnerSwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    loop: true,
+    speed: 4000,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+    },
+    freeMode: true,
+    freeModeMomentum: false,
+    grabCursor: true,
+    });
+
+    // Pause on hover, resume on leave
+    const swiperEl = document.querySelector('.partnerSwiper');
+
+    swiperEl.addEventListener('mouseenter', () => {
+    swiper.autoplay.stop();
+    });
+
+    swiperEl.addEventListener('mouseleave', () => {
+    swiper.autoplay.start();
+    });
+
+
+
+    // learn more buttons
+    // for private sessions div...
+    const learnBtn = document.getElementById("privateLearn");
+    const closeBtn = document.getElementById("privateClose");
+    const dots = document.getElementById("dots");
+    const extraWrapper = document.getElementById("extraWrapper");
+
+    closeBtn.style.display = "none";
+
+    learnBtn.addEventListener("click", function () {
+        dots.style.display = "none";
+        extraWrapper.classList.add("open");
+        learnBtn.style.display = "none";
+        closeBtn.style.display = "inline-block";
+    });
+
+    closeBtn.addEventListener("click", function () {
+        extraWrapper.classList.remove("open");
+        learnBtn.style.display = "inline-block";
+        closeBtn.style.display = "none";
+        dots.style.display = "inline";
+    });
+
+    // for 24/7 div
+    const all_day = document.getElementById("all_day");
+    const closeBtn2 = document.getElementById("all-dayClose");
+    const dots2 = document.getElementById("dots2");
+    const extraWrapper2 = document.getElementById("extraWrapper2");
+
+    closeBtn2.style.display = "none";
+
+    all_day.addEventListener("click", function () {
+        dots2.style.display = "none";
+        extraWrapper2.classList.add("open");
+        all_day.style.display = "none";
+        closeBtn2.style.display = "inline-block";
+    });
+
+    closeBtn2.addEventListener("click", function () {
+        extraWrapper2.classList.remove("open");
+        all_day.style.display = "inline-block";
+        closeBtn2.style.display = "none";
+        dots2.style.display = "inline";
+    });
+
+    // for anonymous div
+    const anonymous= document.getElementById("anonymous");
+    const closeBtn3 = document.getElementById("anonymousClose");
+    const dots3 = document.getElementById("dots3");
+    const extraWrapper3 = document.getElementById("extraWrapper3");
+
+    closeBtn3.style.display = "none";
+
+    anonymous.addEventListener("click", function () {
+        dots3.style.display = "none";
+        extraWrapper3.classList.add("open");
+        anonymous.style.display = "none";
+        closeBtn3.style.display = "inline-block";
+    });
+
+    closeBtn3.addEventListener("click", function () {
+        extraWrapper3.classList.remove("open");
+        anonymous.style.display = "inline-block";
+        closeBtn3.style.display = "none";
+        dots3.style.display = "inline";
+    });
+
+
+
+    
+
+
+
+
+    const modal = document.getElementById('registerModal');
+    const registerBtn = document.getElementById('registerBtn');
+    const loginModal = document.getElementById('loginModal');
+    const loginBtn = document.getElementById('loginBtn');
+
+    // Toggle modals
+    registerBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        modal.classList.toggle('show');
+        loginModal.classList.remove('show'); 
+    });
+
+    loginBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); 
+        loginModal.classList.toggle('show');
+        modal.classList.remove('show'); 
+    });
+
+    // Close login and signup modals if clicked outside
+    document.addEventListener('click', (event) => {
+        const clickedInsideRegister = modal.contains(event.target) || registerBtn.contains(event.target);
+        const clickedInsideLogin = loginModal.contains(event.target) || loginBtn.contains(event.target);
+
+        if (!clickedInsideRegister) {
+            modal.classList.remove('show');
+        }
+
+        if (!clickedInsideLogin) {
+            loginModal.classList.remove('show');
+        }
+    });
+
+
+    document.querySelectorAll('.like').forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('liked');
+        });
+    });
 
 
 

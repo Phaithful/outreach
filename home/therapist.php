@@ -9,4 +9,6 @@ session_start();
     <a href="../chat/th_notification.php"><button>Notifications</button></a>
     <!-- //dont leave this bracket -->
 <?php } ?>
+
 <!-- dont reach here -->
+ 

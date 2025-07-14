@@ -42,39 +42,21 @@ include "qauth/resolve.php"
             </a>
 
 
-
             <div class="urgent_div">
-                <button class="btn urgent" id="urgentBtn" type="button">
-                    <span class="material-symbols-outlined">call</span>
-                    Talk to a Therapist
-                </button>
-            </div>
-
-
-            <div class="urgent_div">
-                <button class="btn login" type="button"></button>
-                <button class="btn signup" type="button">Log In</button>
+                <button class="btn logout" type="button">Log Out</button>
             </div>
 
         </div>
     </nav>
 
-
-    <div id="ripple-effect"></div>
-
     <section class="home" style="position: relative; overflow: hidden;">
-        <div class="hands">
-            <div class="white"></div>
-            <img src="images/hands1.png" alt="">
-        </div>
 
 
         <section>
             <!-- Imput checkbox inside form -->
             <form action="" method="post" class="container mt-5 p-4 rounded shadow bg-light" style="max-width: 700px;">
                 <div class="d-flex justify-content-center align-items-center header">
-                    <span class="material-symbols-outlined">indeterminate_question_box</span>
-                    <h1 class="mb-4">Please Kindly Indicate</h1>
+                    <h1 class="mb-4">Kindly <span>Indicate</span>,</h1>
                 </div>
                 <?php
                 // Fetch all problems from DB
@@ -106,7 +88,10 @@ include "qauth/resolve.php"
                     <p class="text-danger mt-1 t"><?php echo $errors['problems']; ?></p>
                 </div>
 
-                <button type="submit" name="special" class="btn btn-primary w-100">Submit Application</button>
+                <button type="submit" name="special" class="btn btn-primary w-100 submit_btn">
+                    Submit Application
+                    <span class="material-symbols-outlined">keyboard_capslock</span>
+                </button>
 
             </form>
 
@@ -114,6 +99,47 @@ include "qauth/resolve.php"
         </section>
 
     </section>
+
+    
+    <footer class=" py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 col-md-3 mb-4 mb-md-0 logo-cont">
+                    <div class="logo">
+                        <img src="images/black_logo.png" alt="">
+                        <h4>Outreach</h4>
+                    </div>
+                    <p>Inspiring hope, facilitating healing, and empowering mental wellness journeys.</p>
+                </div>
+                <div class="col-12 col-md-3 mb-4 mb-md-0 service" >
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none" style="color: #a3a3a3">Private Therapy</a></li>
+                        <li><a href="#" class=" text-decoration-none" style="color: #a3a3a3">Crisis Support</a></li>
+                        <li><a href="#" class=" text-decoration-none" style="color: #a3a3a3">Audio Calls</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 mb-4 mb-md-0 support">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class=" text-decoration-none" style="color: #a3a3a3">FAQ</a></li>
+                        <li><a href="#" class=" text-decoration-none" style="color: #a3a3a3">Pricavy Policy</a></li>
+                        <li><a href="#" class=" text-decoration-none" style="color: #a3a3a3">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 contact">
+                    <h5>Stay Connected</h5>
+                    <p>Subscribe to our newsletter for updates.</p>
+                    <form>
+                    <input type="email" class="form-control mb-2" placeholder="Email address">
+                    <button type="submit" class="btn btn-outline-light w-100">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <p class="text-center mb-0">&copy; 2025 Outreach. All rights reserved. Your mental health matters. You are not alone.</p>
+        </div>
+    </footer>
 
     <script src="help.js" ></script>
 

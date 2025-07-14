@@ -71,118 +71,22 @@ body, html {
 }
 
 
-.urgent{
-    color: white ;
-    font-weight: 500;
-    background: linear-gradient(71deg,rgb(218, 99, 158) 0%, rgb(218, 51, 131) 100%);
-    padding: 5px 20px !important;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    border-radius: 50px;
-    transition: all 300ms ease-in-out !important;
-}
 
-.urgent:hover{
-  color: white;
-  padding: 5px 35px !important;
-  background: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
-}
-
-.urgent span{
-  transition: all 300ms ease-in-out !important;
-}
-
-.urgent:hover span{
-  transform: rotate(45deg);
-}
-
-.urgent_div{
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 10px;
-}
-
-.urgent_div p {
-  color: white;
-  font-size: 1.3rem !important;
-  letter-spacing: 1px;
-  margin: 0;
-  line-height: 1;
-}
-
-.login{
+.logout{
   border: solid 2px rgb(194, 26, 107);
   font-size: 1rem !important;
   padding: 0.2rem 1rem;
   transition: all 300ms ease-in-out !important;
 }
 
-.signup{
-  border: solid 2px rgb(194, 26, 107);
-  font-size: 1rem !important;
-  padding: 0.2rem 1rem;
-  transition: all 300ms ease-in-out !important;
-}
 
-.login:hover{
-  background: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
-  color: white;
-  padding: 0.2rem 2rem;
-}
-
-.signup:hover{
+.logout:hover{
   background: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
   color: white;
   padding: 0.2rem 2rem;
 }
 
 
-
-.white{
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-}
-
-.hands {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -3;
-}
-
-.hands img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -3;
-}
-
-
-.home{
-    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-    padding-top: 20px;
-    padding-bottom: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
 .header{
   display: flex;
@@ -190,15 +94,114 @@ body, html {
   justify-content: center;
 }
 
-.home h1{
+.header h1{
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 2.5rem;
+  font-weight: 800;
 }
          
+.header span{
+  color: rgb(218, 51, 131); 
+}
 
 
+.home{
+  padding-bottom: 30px;
+}
+
+.submit_btn {background-image: linear-gradient(to right, rgb(218, 51, 131) 0%, #f09ad4  51%, rgb(218, 51, 131)  100%)}
+.submit_btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none;
+  font-size: 1.3rem !important;
+  color: white !important;
+  padding: 10px 10px !important;
+  border-radius: 25px !important;
+  transition: all 300ms ease-in-out !important;
+  gap: 10px;
+  background-size: 200% auto !important;          
+}
+
+.submit_btn:hover {
+  background-position: right center; 
+  color: #fff;
+  text-decoration: none;
+}
+
+.submit_btn span{
+  transition: all 300ms ease-in-out !important;
+}
+
+.submit_btn:hover span{
+  transform: rotate(90deg);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgb(218, 51, 131) !important;
+  box-shadow: 0 0 0 0.2rem rgba(218, 51, 131, 0.25) !important;
+  outline: none;
+}
+
+
+
+footer{
+  background-color: #262626 !important;
+  text-align: center !important;
+  color: #a3a3a3 !important;
+}
+
+footer img{
+  height: 40px;
+  width: auto;
+}
+
+footer .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+
+footer .logo-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  gap: 8px;
+}
+
+footer .logo-cont h4{
+  color: white;
+  font-weight: 900;
+  padding-bottom: 8px;
+}
+
+footer .service h5{
+  color: var(--blue);
+  font-weight: 900;
+  padding-bottom: 8px;
+}
+
+footer .support h5{
+  color: #86efac;
+  font-weight: 900;
+  padding-bottom: 8px;
+}
+
+footer .contact h5{
+  color: #dba5e0;
+  font-weight: 900;
+  padding-bottom: 10px;
+}
+
+footer li{
+  padding-bottom: 7px;
+}
 
 
 
