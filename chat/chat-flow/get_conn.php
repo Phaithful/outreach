@@ -53,11 +53,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"  &&  isset($_POST["tuser_id"])) {
         $insert->close();
     }
     $select->close();
-    $conn->close();
 
     $_SESSION["therapist_id"] = $tid;
     $_SESSION["tuser_name"] = $tname;
     $_SESSION["chat_id"] = $chat_id;
 
-    header("Location: ./chat.php");
+    //notification for therapist
+
+
+    $notif_user_id = $tuid;
+    $title = "New chat request";
+    $message = "you have a new message from:". $_SESSION["username"] ;
+    $link = $chat_id;
+
+    $notif_stmt = $conn->prepare("INSERT INTO notifications (user_id, title, message, link) VALUES (?, ?, ?, ?)");
+    $notif_stmt->bind_param("isss", $notif_user_id, $title, $message, $link);
+    $notif_stmt->execute();
+    $notif_stmt->close();
+    $conn->close();
+
+    header("Location: ./chat.php?chat_id=" . urlencode($chat_id));
 }

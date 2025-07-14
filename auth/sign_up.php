@@ -75,30 +75,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"  &&   isset($_POST["t_submit"]) || iss
                 header("location: ./home/victim.php");
             }
         }
-        // $mail = new PHPMailer(true);
-        // // put it in a try block
-        // try {
-        //     //block for our info
-        //     $mail  -> isSMTP();// what format we send the message
-        //     $mail -> Host = "smtp.gmail.com" ;//shows the host is .gmail
-        //     $mail -> SMTPAuth = true;
-        //     $mail -> Username = "outreach.coree@gmail.com";
-        //     $mail -> Password = "ogcqkzqppuzdgrus"; //gmail generated app password
-        //     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //tls orr ssl
-        //     $mail -> Port = "465"; //port 465 for ssl
+        $mail = new PHPMailer(true);
+        // put it in a try block
+        try {
+            //block for our info
+            $mail  -> isSMTP();// what format we send the message
+            $mail -> Host = "smtp.gmail.com" ;//shows the host is .gmail
+            $mail -> SMTPAuth = true;
+            $mail -> Username = "outreach.coree@gmail.com";
+            $mail -> Password = "ogcqkzqppuzdgrus"; //gmail generated app password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //tls orr ssl
+            $mail -> Port = "465"; //port 465 for ssl
 
-        //     $mail -> setFrom("outreach.coree@gmail.com", "Welcome to Outreach"); //who they'll see sent an email
-        //     $mail -> addAddress($email); //email receiving the otp
-        //     $mail -> isHTML(true);
-        //     $mail -> Subject = "Sign up for out reach";
-        //     $mail->Body = "<p>Hello, {$_SESSION['email']}</p>
-        //     <p>You've just signed in to outreach. '<br>' Welcome to the community and get ready to see lives get changed</p>";
-        //     $mail -> send();
-        // }
-        // catch (Exception $e) {
-        //     $errors['email'] = "ERROR! Email didnt send" . $mail -> ErrorInfo ;
-        //     // header("Location: ./pforgot_password.php ");
-        // }
+            $mail -> setFrom("outreach.coree@gmail.com", "Welcome to Outreach"); //who they'll see sent an email
+            $mail -> addAddress($email); //email receiving the otp
+            $mail -> isHTML(true);
+            $mail -> Subject = "Sign up for out reach";
+            $mail->Body = "<p>Hello, {$_SESSION['email']}</p>
+            <p>You've just signed in to outreach. '<br>' Welcome to the community and get ready to see lives get changed</p>";
+            $mail -> send();
+        }
+        catch (Exception $e) {
+            $errors['email'] = "ERROR! Email didnt send" . $mail -> ErrorInfo ;
+            // header("Location: ./pforgot_password.php ");
+        }
         $stmt -> close();
         $conn -> close();
     }

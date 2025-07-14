@@ -46,6 +46,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" &&  isset($_POST["v_submit"]) || isset
                 $_SESSION["user_id"] = $user_id;
                 $_SESSION["email"] = $mail;
 
+                if ($role_id == 2){
+                    header("Location: ./home/therapist.php");
+                }
+                elseif ($role_id == 3) {
+                    header("Location: ./home/victim.php");
+                }
+                else {
+                    $errors["email"] = "Wrong role contact admin";
+                }
+
             }
             else {
                 $errors["pass"] = "You inputed the wrong password";
@@ -53,12 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" &&  isset($_POST["v_submit"]) || isset
         }
         else {
             $errors["email"] = "No Email found";
-        }
-        if ($role_id == 2){
-            header("Location: ./home/therapist.php");
-        }
-        elseif ($role_id == 3) {
-            header("Location: ./home/victim.php");
         }
     }
 
