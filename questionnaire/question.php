@@ -75,7 +75,7 @@ include "qauth/questionnaire.php"
             <div class="row mb-3">
                 <div class="mb-3 col-md-6">
                     <label for="email" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
+                    <input type="email" class="form-control" id="email" name="email" required value=" <?php echo $_SESSION["email"] ?>" readonly >
                 </div>
 
                 <div class="mb-3 col-md-6">
