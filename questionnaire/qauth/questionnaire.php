@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" &&  isset($_POST["submit"])) {
 
     if (empty($misconduct)) {
         $errors["misconduct"] = "Please input phone details";
-    } elseif ($misconduct == "yes") {
+    } elseif ($misconduct === "yes") {
         $errors["misconduct"] = "You Have done misconduct no therapist for you";
     }
 

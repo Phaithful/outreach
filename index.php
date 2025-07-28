@@ -79,7 +79,7 @@
         <div class="modal_content">
             <div class="as_professional">
                 <img src="images/voice.png" alt="">
-                <a href="plogin.php">Login in as Voice</a>
+                <a href="plogin.php">Login in as Patient</a>
             </div>
             <hr>
             <div class="as_student">
@@ -96,7 +96,7 @@
         <div class="modal_content">
             <div class="as_school">
                 <img src="images/voice.png" alt="">
-                <a href="psignup.php">Sign in as Voice</a>
+                <a href="psignup.php">Sign in as Patient</a>
             </div>
             <hr>
             <div class="as_professional">

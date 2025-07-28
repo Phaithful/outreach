@@ -267,6 +267,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: scroll;
     /* background: radial-gradient(circle,#caaee5 0%, #fc9bc8 100%); */
 }
 

@@ -3,8 +3,6 @@
 session_start();
 ?>
 
-<?php echo $_SESSION["username"] ?>
-
 <?php if ($_SESSION["role"] == 2) { ?>
     <!-- // start writing font end code from here -->
 

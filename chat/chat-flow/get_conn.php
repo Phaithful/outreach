@@ -30,15 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"  &&  isset($_POST["tuser_id"])) {
     $tname = $_POST["tuser_name"];
     $uid = $_SESSION["user_id"];
 
-    $look = $conn->prepare("SELECT id FROM therapist WHERE user_id = ?");
-    $look->bind_param("i", $tuid);
-    $look->execute();
-    $look->bind_result($tid);
-    $look->fetch();
-    $look->close();
 
     $select = $conn->prepare("SELECT chat_room_id FROM chat_sessions WHERE user_id = ? AND therapist_id = ?");
-    $select->bind_param("ii", $uid, $tid);
+    $select->bind_param("ii", $uid, $tuid);
     $select->execute();
     $select->store_result();
 
@@ -48,13 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"  &&  isset($_POST["tuser_id"])) {
     } else {
         $chat_id = uniqid("chat_");
         $insert = $conn->prepare("INSERT INTO chat_sessions (user_id, therapist_id, chat_room_id) VALUES (?,?,?) ");
-        $insert->bind_param("iis", $uid, $tid, $chat_id);
+        $insert->bind_param("iis", $uid, $tuid, $chat_id);
         $insert->execute();
         $insert->close();
     }
     $select->close();
 
-    $_SESSION["therapist_id"] = $tid;
     $_SESSION["tuser_name"] = $tname;
     $_SESSION["chat_id"] = $chat_id;
 

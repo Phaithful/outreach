@@ -1,47 +1,7 @@
 <?php
-session_start();
-include "../config/db.php";
-if ($_SESSION["role"] == 2) {
+include "chat-flow/notif.php";
 
-    $user_id = $_SESSION["user_id"];
-
-    $query = "SELECT id, title, message, link, created_at FROM notifications WHERE user_id = ? AND seen = 0 ORDER BY created_at DESC";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("i", $user_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-?>
-    <!-- <!DOCTYPE html>
-    <html>
-
-    <head>
-        <title>My Notifications</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-
-    <body class="bg-light">
-        <div class="container mt-5">
-            <h3>🔔 New Notifications</h3>
-            <ul class="list-group">
-                <?php //while ($row = $result->fetch_assoc()): ?>
-                    <li class="list-group-item">
-                        <strong><?php //echo htmlspecialchars($row['title']); ?></strong><br>
-                        <?php //echo htmlspecialchars($row['message']); ?><br>
-                        <small><?php //echo $row['created_at']; ?></small><br>
-                        <a class="btn btn-sm btn-primary mt-2"
-                            href="chat-flow/mark_notif.php?id=<?php //echo $row['id']; ?>&link=<?php //echo urlencode($row['link']); ?>">
-                            View Chat
-                        </a>
-                    </li>
-                <?php //endwhile; ?>
-            </ul>
-        </div>
-    </body>
-
-    </html>
-
-
- -->
+if ($_SESSION["role"] == 2) {?>
 
 
     <!DOCTYPE html>
@@ -57,10 +17,7 @@ if ($_SESSION["role"] == 2) {
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="th_notification.css">
         <link rel="icon" href="images/white_logo.png" type="image/png">
-
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
-
-
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
@@ -100,7 +57,7 @@ if ($_SESSION["role"] == 2) {
                     </a>
 
                     <a href="" >
-                        <span class="material-symbols-outlined">chat</span>                 
+                        <span class="material-symbols-outlined">chat</span>
                         <h3>Chat</h3>
                     </a>
 
@@ -167,11 +124,11 @@ if ($_SESSION["role"] == 2) {
                             <h1>Notifications<span>.</span></h1>
 
                             <div>
-                                <form action="" class="drop_form">
-                                    <select name="filter" id="filterNotif" class="styled-select">
-                                        <option value="volvo">All</option>
-                                        <option value="saab">Unread</option>
-                                        <option value="opel">Chat</option>
+                                <form action="" class="drop_form" method="post">
+                                    <select name="filter" onchange="this.form.submit()" id="filterNotif" class="styled-select">
+                                        <option value="all"  <?php if ($filter === 'all') echo 'selected'; ?> >All</option>
+                                        <option value="unread"  <?php if ($filter === 'unread') echo 'selected'; ?> >Unread</option>
+                                        <option value="read"  <?php if ($filter === 'read') echo 'selected'; ?> >Read</option>
                                     </select>
                                     <span class="material-symbols-outlined dropdown-icon">keyboard_arrow_down</span>
                                 </form>
@@ -193,11 +150,17 @@ if ($_SESSION["role"] == 2) {
                                                 <small><?php echo $row['created_at']; ?></small>
                                             </div>
                                         </div>
-   
-                                        <a class="btn btn-sm btn-primary mt-2"
-                                            href="chat-flow/mark_notif.php?id=<?php echo $row['id']; ?>&link=<?php echo urlencode($row['link']); ?>">
-                                            View Chat
-                                        </a>
+
+                                        <?php if ($row["seen"] == 0 ) { ?>
+                                            <a class="btn btn-sm btn-primary mt-2"
+                                                href="chat-flow/mark_notif.php?id=<?php echo $row['id']; ?>&link=<?php echo urlencode($row['link']); ?>">
+                                                View Chat
+                                            </a>
+                                        <?php } elseif($row["seen"] == 1 ) {?>
+
+                                            <button style="  font-size: 0.9rem; padding: 7px 12px; text-align: center;  background-color: var(--color-dark);  color: white;  margin-top: 5px;  transition: all 300ms ease-in-out;" disabled >Viewed</button>
+
+                                        <?php }?>
 
                                     </li>
                                 <?php endwhile; ?>
@@ -227,6 +190,6 @@ if ($_SESSION["role"] == 2) {
 
 
 <?php } else {
-    header("location: ../plogin.php");
+    header("location: ../index.php");
 }
 ?>
