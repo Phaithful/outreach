@@ -1,0 +1,953 @@
+Folder PATH listing
+Volume serial number is 2A90-11F9
+C:.
+³   composer.json
+³   composer.lock
+³   folder-structure.txt
+³   index.php
+³   pemail-sent.php
+³   pforgot_password.php
+³   plogin.php
+³   preset-password.php
+³   psignup.php
+³   temail-sent.php
+³   tforgot-password.php
+³   tlogin.php
+³   treset-password.php
+³   tsignup.php
+³   
+ÃÄÄÄassets
+³   ÃÄÄÄcss
+³   ³       pemail-sent.css
+³   ³       pforgot_password.css
+³   ³       plogin.css
+³   ³       preset-password.css
+³   ³       psignup.css
+³   ³       style.css
+³   ³       temail-sent.css
+³   ³       tforgot-password.css
+³   ³       tlogin.css
+³   ³       treset-password.css
+³   ³       tsignup.css
+³   ³       
+³   ÀÄÄÄjs
+³           pemail-sent.js
+³           plogin.js
+³           preset-password.js
+³           psignup.js
+³           script.js
+³           temail-sent.js
+³           tlogin.js
+³           treset-password.js
+³           tsignup.js
+³           
+ÃÄÄÄauth
+³       forgot_password.php
+³       login.php
+³       reset.php
+³       sign_up.php
+³       verify-otp.php
+³       
+ÃÄÄÄchat
+³   ³   avatar.png
+³   ³   chat.php
+³   ³   relate.php
+³   ³   th_notification.css
+³   ³   th_notification.js
+³   ³   th_notification.php
+³   ³   
+³   ÀÄÄÄchat-flow
+³           chat_view.php
+³           debug.txt
+³           get_conn.php
+³           mark_notif.php
+³           notif.php
+³           
+ÃÄÄÄconfig
+³       db.php
+³       
+ÃÄÄÄhome
+³   ³   therapist.php
+³   ³   victim.php
+³   ³   
+³   ÀÄÄÄassets
+³       ÀÄÄÄcss
+³               therapist.css
+³               victim.css
+³               
+ÃÄÄÄimages
+³   ³   247.png
+³   ³   639f4c15ad4f90afa630803e745a543e213f21ff.jpg
+³   ³   anonymous.png
+³   ³   black_logo.png
+³   ³   black_logo2.png
+³   ³   confrence.png
+³   ³   dark_star.png
+³   ³   hands.jpg
+³   ³   hands1.png
+³   ³   happy.png
+³   ³   listener.png
+³   ³   mission.png
+³   ³   private.png
+³   ³   star.png
+³   ³   star2.png
+³   ³   voice.png
+³   ³   white_logo.png
+³   ³   
+³   ÃÄÄÄpartners
+³   ³       capitis-logo.0fdb9306.svg
+³   ³       enugu-sme-logo.88c278f3.svg
+³   ³       esg-logo.5e44c702.svg
+³   ³       genesys-logo.df6b6556.svg
+³   ³       ode-logo.68d565cf.svg
+³   ³       peter-mbah-logo.f77990af.svg
+³   ³       the-garage-logo.9cd53ada.svg
+³   ³       
+³   ÀÄÄÄprofile
+³           female1.png
+³           female2.png
+³           male.png
+³           male2.png
+³           
+ÃÄÄÄquestionnaire
+³   ³   area.css
+³   ³   area.php
+³   ³   help.css
+³   ³   help.js
+³   ³   help.php
+³   ³   question.css
+³   ³   question.php
+³   ³   
+³   ÃÄÄÄcertificate
+³   ³       687633ca49e66_NNPC Designed without BG.drawio.pdf
+³   ³       687a23661eec6_lasued 1.png
+³   ³       68837da70ee3d_generated_photos_684578a34d715d000e815bad.jpg
+³   ³       68837e1fd7ecd_AI_Generated_Logo_2025-06-07_0bd4cb8d-2e81-44dc-91f1-402b75f3de86-removebg-preview.png
+³   ³       
+³   ÀÄÄÄqauth
+³           questionnaire.php
+³           resolve.php
+³           solution.php
+³           
+ÃÄÄÄvendor
+³   ³   autoload.php
+³   ³   
+³   ÃÄÄÄcboden
+³   ³   ÀÄÄÄratchet
+³   ³       ³   .gitignore
+³   ³       ³   CHANGELOG.md
+³   ³       ³   composer.json
+³   ³       ³   LICENSE
+³   ³       ³   Makefile
+³   ³       ³   phpunit.xml.dist
+³   ³       ³   README.md
+³   ³       ³   SECURITY.md
+³   ³       ³   
+³   ³       ÃÄÄÄ.github
+³   ³       ³   ÀÄÄÄworkflows
+³   ³       ³           ci.yml
+³   ³       ³           
+³   ³       ÃÄÄÄsrc
+³   ³       ³   ÀÄÄÄRatchet
+³   ³       ³       ³   AbstractConnectionDecorator.php
+³   ³       ³       ³   App.php
+³   ³       ³       ³   ComponentInterface.php
+³   ³       ³       ³   ConnectionInterface.php
+³   ³       ³       ³   MessageComponentInterface.php
+³   ³       ³       ³   MessageInterface.php
+³   ³       ³       ³   
+³   ³       ³       ÃÄÄÄHttp
+³   ³       ³       ³       CloseResponseTrait.php
+³   ³       ³       ³       HttpRequestParser.php
+³   ³       ³       ³       HttpServer.php
+³   ³       ³       ³       HttpServerInterface.php
+³   ³       ³       ³       NoOpHttpServerController.php
+³   ³       ³       ³       OriginCheck.php
+³   ³       ³       ³       Router.php
+³   ³       ³       ³       
+³   ³       ³       ÃÄÄÄServer
+³   ³       ³       ³       EchoServer.php
+³   ³       ³       ³       FlashPolicy.php
+³   ³       ³       ³       IoConnection.php
+³   ³       ³       ³       IoServer.php
+³   ³       ³       ³       IpBlackList.php
+³   ³       ³       ³       
+³   ³       ³       ÃÄÄÄSession
+³   ³       ³       ³   ³   SessionProvider.php
+³   ³       ³       ³   ³   
+³   ³       ³       ³   ÃÄÄÄSerialize
+³   ³       ³       ³   ³       HandlerInterface.php
+³   ³       ³       ³   ³       PhpBinaryHandler.php
+³   ³       ³       ³   ³       PhpHandler.php
+³   ³       ³       ³   ³       
+³   ³       ³       ³   ÀÄÄÄStorage
+³   ³       ³       ³       ³   VirtualSessionStorage.php
+³   ³       ³       ³       ³   
+³   ³       ³       ³       ÀÄÄÄProxy
+³   ³       ³       ³               VirtualProxy.php
+³   ³       ³       ³               
+³   ³       ³       ÃÄÄÄWamp
+³   ³       ³       ³       Exception.php
+³   ³       ³       ³       JsonException.php
+³   ³       ³       ³       ServerProtocol.php
+³   ³       ³       ³       Topic.php
+³   ³       ³       ³       TopicManager.php
+³   ³       ³       ³       WampConnection.php
+³   ³       ³       ³       WampServer.php
+³   ³       ³       ³       WampServerInterface.php
+³   ³       ³       ³       
+³   ³       ³       ÀÄÄÄWebSocket
+³   ³       ³               ConnContext.php
+³   ³       ³               MessageCallableInterface.php
+³   ³       ³               MessageComponentInterface.php
+³   ³       ³               WsConnection.php
+³   ³       ³               WsServer.php
+³   ³       ³               WsServerInterface.php
+³   ³       ³               
+³   ³       ÀÄÄÄtests
+³   ³           ³   bootstrap.php
+³   ³           ³   
+³   ³           ÃÄÄÄautobahn
+³   ³           ³   ³   fuzzingclient-all.json
+³   ³           ³   ³   fuzzingclient-profile.json
+³   ³           ³   ³   fuzzingclient-quick.json
+³   ³           ³   ³   
+³   ³           ³   ÀÄÄÄbin
+³   ³           ³           fuzzingserver.php
+³   ³           ³           
+³   ³           ÃÄÄÄhelpers
+³   ³           ³   ÀÄÄÄRatchet
+³   ³           ³       ³   AbstractMessageComponentTestCase.php
+³   ³           ³       ³   NullComponent.php
+³   ³           ³       ³   
+³   ³           ³       ÃÄÄÄMock
+³   ³           ³       ³       Component.php
+³   ³           ³       ³       Connection.php
+³   ³           ³       ³       ConnectionDecorator.php
+³   ³           ³       ³       WampComponent.php
+³   ³           ³       ³       
+³   ³           ³       ÃÄÄÄWamp
+³   ³           ³       ³   ÀÄÄÄStub
+³   ³           ³       ³           WsWampServerInterface.php
+³   ³           ³       ³           
+³   ³           ³       ÀÄÄÄWebSocket
+³   ³           ³           ÀÄÄÄStub
+³   ³           ³                   WsMessageComponentInterface.php
+³   ³           ³                   
+³   ³           ÀÄÄÄunit
+³   ³               ³   AbstractConnectionDecoratorTest.php
+³   ³               ³   
+³   ³               ÃÄÄÄHttp
+³   ³               ³       HttpRequestParserTest.php
+³   ³               ³       HttpServerTest.php
+³   ³               ³       OriginCheckTest.php
+³   ³               ³       RouterTest.php
+³   ³               ³       
+³   ³               ÃÄÄÄServer
+³   ³               ³       EchoServerTest.php
+³   ³               ³       FlashPolicyComponentTest.php
+³   ³               ³       IoConnectionTest.php
+³   ³               ³       IoServerTest.php
+³   ³               ³       IpBlackListComponentTest.php
+³   ³               ³       
+³   ³               ÃÄÄÄSession
+³   ³               ³   ³   SessionComponentTest.php
+³   ³               ³   ³   
+³   ³               ³   ÃÄÄÄSerialize
+³   ³               ³   ³       PhpHandlerTest.php
+³   ³               ³   ³       
+³   ³               ³   ÀÄÄÄStorage
+³   ³               ³           VirtualSessionStoragePDOTest.php
+³   ³               ³           
+³   ³               ÀÄÄÄWamp
+³   ³                       ServerProtocolTest.php
+³   ³                       TopicManagerTest.php
+³   ³                       TopicTest.php
+³   ³                       WampConnectionTest.php
+³   ³                       WampServerTest.php
+³   ³                       
+³   ÃÄÄÄcomposer
+³   ³       autoload_classmap.php
+³   ³       autoload_files.php
+³   ³       autoload_namespaces.php
+³   ³       autoload_psr4.php
+³   ³       autoload_real.php
+³   ³       autoload_static.php
+³   ³       ClassLoader.php
+³   ³       installed.json
+³   ³       installed.php
+³   ³       InstalledVersions.php
+³   ³       LICENSE
+³   ³       platform_check.php
+³   ³       
+³   ÃÄÄÄevenement
+³   ³   ÀÄÄÄevenement
+³   ³       ³   .gitattributes
+³   ³       ³   composer.json
+³   ³       ³   LICENSE
+³   ³       ³   README.md
+³   ³       ³   
+³   ³       ÀÄÄÄsrc
+³   ³               EventEmitter.php
+³   ³               EventEmitterInterface.php
+³   ³               EventEmitterTrait.php
+³   ³               
+³   ÃÄÄÄguzzlehttp
+³   ³   ÀÄÄÄpsr7
+³   ³       ³   CHANGELOG.md
+³   ³       ³   composer.json
+³   ³       ³   LICENSE
+³   ³       ³   README.md
+³   ³       ³   
+³   ³       ÀÄÄÄsrc
+³   ³           ³   AppendStream.php
+³   ³           ³   BufferStream.php
+³   ³           ³   CachingStream.php
+³   ³           ³   DroppingStream.php
+³   ³           ³   FnStream.php
+³   ³           ³   Header.php
+³   ³           ³   HttpFactory.php
+³   ³           ³   InflateStream.php
+³   ³           ³   LazyOpenStream.php
+³   ³           ³   LimitStream.php
+³   ³           ³   Message.php
+³   ³           ³   MessageTrait.php
+³   ³           ³   MimeType.php
+³   ³           ³   MultipartStream.php
+³   ³           ³   NoSeekStream.php
+³   ³           ³   PumpStream.php
+³   ³           ³   Query.php
+³   ³           ³   Request.php
+³   ³           ³   Response.php
+³   ³           ³   Rfc7230.php
+³   ³           ³   ServerRequest.php
+³   ³           ³   Stream.php
+³   ³           ³   StreamDecoratorTrait.php
+³   ³           ³   StreamWrapper.php
+³   ³           ³   UploadedFile.php
+³   ³           ³   Uri.php
+³   ³           ³   UriComparator.php
+³   ³           ³   UriNormalizer.php
+³   ³           ³   UriResolver.php
+³   ³           ³   Utils.php
+³   ³           ³   
+³   ³           ÀÄÄÄException
+³   ³                   MalformedUriException.php
+³   ³                   
+³   ÃÄÄÄphpmailer
+³   ³   ÀÄÄÄphpmailer
+³   ³       ³   COMMITMENT
+³   ³       ³   composer.json
+³   ³       ³   get_oauth_token.php
+³   ³       ³   LICENSE
+³   ³       ³   README.md
+³   ³       ³   SECURITY.md
+³   ³       ³   SMTPUTF8.md
+³   ³       ³   VERSION
+³   ³       ³   
+³   ³       ÃÄÄÄlanguage
+³   ³       ³       phpmailer.lang-af.php
+³   ³       ³       phpmailer.lang-ar.php
+³   ³       ³       phpmailer.lang-as.php
+³   ³       ³       phpmailer.lang-az.php
+³   ³       ³       phpmailer.lang-ba.php
+³   ³       ³       phpmailer.lang-be.php
+³   ³       ³       phpmailer.lang-bg.php
+³   ³       ³       phpmailer.lang-bn.php
+³   ³       ³       phpmailer.lang-ca.php
+³   ³       ³       phpmailer.lang-cs.php
+³   ³       ³       phpmailer.lang-da.php
+³   ³       ³       phpmailer.lang-de.php
+³   ³       ³       phpmailer.lang-el.php
+³   ³       ³       phpmailer.lang-eo.php
+³   ³       ³       phpmailer.lang-es.php
+³   ³       ³       phpmailer.lang-et.php
+³   ³       ³       phpmailer.lang-fa.php
+³   ³       ³       phpmailer.lang-fi.php
+³   ³       ³       phpmailer.lang-fo.php
+³   ³       ³       phpmailer.lang-fr.php
+³   ³       ³       phpmailer.lang-gl.php
+³   ³       ³       phpmailer.lang-he.php
+³   ³       ³       phpmailer.lang-hi.php
+³   ³       ³       phpmailer.lang-hr.php
+³   ³       ³       phpmailer.lang-hu.php
+³   ³       ³       phpmailer.lang-hy.php
+³   ³       ³       phpmailer.lang-id.php
+³   ³       ³       phpmailer.lang-it.php
+³   ³       ³       phpmailer.lang-ja.php
+³   ³       ³       phpmailer.lang-ka.php
+³   ³       ³       phpmailer.lang-ko.php
+³   ³       ³       phpmailer.lang-ku.php
+³   ³       ³       phpmailer.lang-lt.php
+³   ³       ³       phpmailer.lang-lv.php
+³   ³       ³       phpmailer.lang-mg.php
+³   ³       ³       phpmailer.lang-mn.php
+³   ³       ³       phpmailer.lang-ms.php
+³   ³       ³       phpmailer.lang-nb.php
+³   ³       ³       phpmailer.lang-nl.php
+³   ³       ³       phpmailer.lang-pl.php
+³   ³       ³       phpmailer.lang-pt.php
+³   ³       ³       phpmailer.lang-pt_br.php
+³   ³       ³       phpmailer.lang-ro.php
+³   ³       ³       phpmailer.lang-ru.php
+³   ³       ³       phpmailer.lang-si.php
+³   ³       ³       phpmailer.lang-sk.php
+³   ³       ³       phpmailer.lang-sl.php
+³   ³       ³       phpmailer.lang-sr.php
+³   ³       ³       phpmailer.lang-sr_latn.php
+³   ³       ³       phpmailer.lang-sv.php
+³   ³       ³       phpmailer.lang-tl.php
+³   ³       ³       phpmailer.lang-tr.php
+³   ³       ³       phpmailer.lang-uk.php
+³   ³       ³       phpmailer.lang-ur.php
+³   ³       ³       phpmailer.lang-vi.php
+³   ³       ³       phpmailer.lang-zh.php
+³   ³       ³       phpmailer.lang-zh_cn.php
+³   ³       ³       
+³   ³       ÀÄÄÄsrc
+³   ³               DSNConfigurator.php
+³   ³               Exception.php
+³   ³               OAuth.php
+³   ³               OAuthTokenProvider.php
+³   ³               PHPMailer.php
+³   ³               POP3.php
+³   ³               SMTP.php
+³   ³               
+³   ÃÄÄÄpsr
+³   ³   ÃÄÄÄhttp-factory
+³   ³   ³   ³   composer.json
+³   ³   ³   ³   LICENSE
+³   ³   ³   ³   README.md
+³   ³   ³   ³   
+³   ³   ³   ÀÄÄÄsrc
+³   ³   ³           RequestFactoryInterface.php
+³   ³   ³           ResponseFactoryInterface.php
+³   ³   ³           ServerRequestFactoryInterface.php
+³   ³   ³           StreamFactoryInterface.php
+³   ³   ³           UploadedFileFactoryInterface.php
+³   ³   ³           UriFactoryInterface.php
+³   ³   ³           
+³   ³   ÀÄÄÄhttp-message
+³   ³       ³   CHANGELOG.md
+³   ³       ³   composer.json
+³   ³       ³   LICENSE
+³   ³       ³   README.md
+³   ³       ³   
+³   ³       ÃÄÄÄdocs
+³   ³       ³       PSR7-Interfaces.md
+³   ³       ³       PSR7-Usage.md
+³   ³       ³       
+³   ³       ÀÄÄÄsrc
+³   ³               MessageInterface.php
+³   ³               RequestInterface.php
+³   ³               ResponseInterface.php
+³   ³               ServerRequestInterface.php
+³   ³               StreamInterface.php
+³   ³               UploadedFileInterface.php
+³   ³               UriInterface.php
+³   ³               
+³   ÃÄÄÄralouphie
+³   ³   ÀÄÄÄgetallheaders
+³   ³       ³   composer.json
+³   ³       ³   LICENSE
+³   ³       ³   README.md
+³   ³       ³   
+³   ³       ÀÄÄÄsrc
+³   ³               getallheaders.php
+³   ³               
+³   ÃÄÄÄratchet
+³   ³   ÀÄÄÄrfc6455
+³   ³       ³   .gitignore
+³   ³       ³   composer.json
+³   ³       ³   LICENSE
+³   ³       ³   phpunit.xml.dist
+³   ³       ³   README.md
+³   ³       ³   
+³   ³       ÃÄÄÄ.github
+³   ³       ³   ÀÄÄÄworkflows
+³   ³       ³           ci.yml
+³   ³       ³           
+³   ³       ÃÄÄÄsrc
+³   ³       ³   ÃÄÄÄHandshake
+³   ³       ³   ³       ClientNegotiator.php
+³   ³       ³   ³       InvalidPermessageDeflateOptionsException.php
+³   ³       ³   ³       NegotiatorInterface.php
+³   ³       ³   ³       PermessageDeflateOptions.php
+³   ³       ³   ³       RequestVerifier.php
+³   ³       ³   ³       ResponseVerifier.php
+³   ³       ³   ³       ServerNegotiator.php
+³   ³       ³   ³       
+³   ³       ³   ÀÄÄÄMessaging
+³   ³       ³           CloseFrameChecker.php
+³   ³       ³           DataInterface.php
+³   ³       ³           Frame.php
+³   ³       ³           FrameInterface.php
+³   ³       ³           Message.php
+³   ³       ³           MessageBuffer.php
+³   ³       ³           MessageInterface.php
+³   ³       ³           
+³   ³       ÀÄÄÄtests
+³   ³           ³   AbResultsTest.php
+³   ³           ³   bootstrap.php
+³   ³           ³   
+³   ³           ÃÄÄÄab
+³   ³           ³       clientRunner.php
+³   ³           ³       docker_bootstrap.sh
+³   ³           ³       fuzzingclient.json
+³   ³           ³       fuzzingclient_skip_deflate.json
+³   ³           ³       fuzzingserver.json
+³   ³           ³       fuzzingserver_skip_deflate.json
+³   ³           ³       run_ab_tests.sh
+³   ³           ³       startServer.php
+³   ³           ³       
+³   ³           ÀÄÄÄunit
+³   ³               ÃÄÄÄHandshake
+³   ³               ³       PermessageDeflateOptionsTest.php
+³   ³               ³       RequestVerifierTest.php
+³   ³               ³       ResponseVerifierTest.php
+³   ³               ³       ServerNegotiatorTest.php
+³   ³               ³       
+³   ³               ÀÄÄÄMessaging
+³   ³                       FrameTest.php
+³   ³                       MessageBufferTest.php
+³   ³                       MessageTest.php
+³   ³                       
+³   ÃÄÄÄreact
+³   ³   ÃÄÄÄcache
+³   ³   ³   ³   CHANGELOG.md
+³   ³   ³   ³   composer.json
+³   ³   ³   ³   LICENSE
+³   ³   ³   ³   README.md
+³   ³   ³   ³   
+³   ³   ³   ÀÄÄÄsrc
+³   ³   ³           ArrayCache.php
+³   ³   ³           CacheInterface.php
+³   ³   ³           
+³   ³   ÃÄÄÄdns
+³   ³   ³   ³   CHANGELOG.md
+³   ³   ³   ³   composer.json
+³   ³   ³   ³   LICENSE
+³   ³   ³   ³   README.md
+³   ³   ³   ³   
+³   ³   ³   ÀÄÄÄsrc
+³   ³   ³       ³   BadServerException.php
+³   ³   ³       ³   RecordNotFoundException.php
+³   ³   ³       ³   
+³   ³   ³       ÃÄÄÄConfig
+³   ³   ³       ³       Config.php
+³   ³   ³       ³       HostsFile.php
+³   ³   ³       ³       
+³   ³   ³       ÃÄÄÄModel
+³   ³   ³       ³       Message.php
+³   ³   ³       ³       Record.php
+³   ³   ³       ³       
+³   ³   ³       ÃÄÄÄProtocol
+³   ³   ³       ³       BinaryDumper.php
+³   ³   ³       ³       Parser.php
+³   ³   ³       ³       
+³   ³   ³       ÃÄÄÄQuery
+³   ³   ³       ³       CachingExecutor.php
+³   ³   ³       ³       CancellationException.php
+³   ³   ³       ³       CoopExecutor.php
+³   ³   ³       ³       ExecutorInterface.php
+³   ³   ³       ³       FallbackExecutor.php
+³   ³   ³       ³       HostsFileExecutor.php
+³   ³   ³       ³       Query.php
+³   ³   ³       ³       RetryExecutor.php
+³   ³   ³       ³       SelectiveTransportExecutor.php
+³   ³   ³       ³       TcpTransportExecutor.php
+³   ³   ³       ³       TimeoutException.php
+³   ³   ³       ³       TimeoutExecutor.php
+³   ³   ³       ³       UdpTransportExecutor.php
+³   ³   ³       ³       
+³   ³   ³       ÀÄÄÄResolver
+³   ³   ³               Factory.php
+³   ³   ³               Resolver.php
+³   ³   ³               ResolverInterface.php
+³   ³   ³               
+³   ³   ÃÄÄÄevent-loop
+³   ³   ³   ³   CHANGELOG.md
+³   ³   ³   ³   composer.json
+³   ³   ³   ³   LICENSE
+³   ³   ³   ³   README.md
+³   ³   ³   ³   
+³   ³   ³   ÀÄÄÄsrc
+³   ³   ³       ³   ExtEventLoop.php
+³   ³   ³       ³   ExtEvLoop.php
+³   ³   ³       ³   ExtLibeventLoop.php
+³   ³   ³       ³   ExtLibevLoop.php
+³   ³   ³       ³   ExtUvLoop.php
+³   ³   ³       ³   Factory.php
+³   ³   ³       ³   Loop.php
+³   ³   ³       ³   LoopInterface.php
+³   ³   ³       ³   SignalsHandler.php
+³   ³   ³       ³   StreamSelectLoop.php
+³   ³   ³       ³   TimerInterface.php
+³   ³   ³       ³   
+³   ³   ³       ÃÄÄÄTick
+³   ³   ³       ³       FutureTickQueue.php
+³   ³   ³       ³       
+³   ³   ³       ÀÄÄÄTimer
+³   ³   ³               Timer.php
+³   ³   ³               Timers.php
+³   ³   ³               
+³   ³   ÃÄÄÄpromise
+³   ³   ³   ³   CHANGELOG.md
+³   ³   ³   ³   composer.json
+³   ³   ³   ³   LICENSE
+³   ³   ³   ³   README.md
+³   ³   ³   ³   
+³   ³   ³   ÀÄÄÄsrc
+³   ³   ³       ³   Deferred.php
+³   ³   ³       ³   functions.php
+³   ³   ³       ³   functions_include.php
+³   ³   ³       ³   Promise.php
+³   ³   ³       ³   PromiseInterface.php
+³   ³   ³       ³   
+³   ³   ³       ÃÄÄÄException
+³   ³   ³       ³       CompositeException.php
+³   ³   ³       ³       LengthException.php
+³   ³   ³       ³       
+³   ³   ³       ÀÄÄÄInternal
+³   ³   ³               CancellationQueue.php
+³   ³   ³               FulfilledPromise.php
+³   ³   ³               RejectedPromise.php
+³   ³   ³               
+³   ³   ÃÄÄÄsocket
+³   ³   ³   ³   CHANGELOG.md
+³   ³   ³   ³   composer.json
+³   ³   ³   ³   LICENSE
+³   ³   ³   ³   README.md
+³   ³   ³   ³   
+³   ³   ³   ÀÄÄÄsrc
+³   ³   ³           Connection.php
+³   ³   ³           ConnectionInterface.php
+³   ³   ³           Connector.php
+³   ³   ³           ConnectorInterface.php
+³   ³   ³           DnsConnector.php
+³   ³   ³           FdServer.php
+³   ³   ³           FixedUriConnector.php
+³   ³   ³           HappyEyeBallsConnectionBuilder.php
+³   ³   ³           HappyEyeBallsConnector.php
+³   ³   ³           LimitingServer.php
+³   ³   ³           SecureConnector.php
+³   ³   ³           SecureServer.php
+³   ³   ³           Server.php
+³   ³   ³           ServerInterface.php
+³   ³   ³           SocketServer.php
+³   ³   ³           StreamEncryption.php
+³   ³   ³           TcpConnector.php
+³   ³   ³           TcpServer.php
+³   ³   ³           TimeoutConnector.php
+³   ³   ³           UnixConnector.php
+³   ³   ³           UnixServer.php
+³   ³   ³           
+³   ³   ÀÄÄÄstream
+³   ³       ³   CHANGELOG.md
+³   ³       ³   composer.json
+³   ³       ³   LICENSE
+³   ³       ³   README.md
+³   ³       ³   
+³   ³       ÀÄÄÄsrc
+³   ³               CompositeStream.php
+³   ³               DuplexResourceStream.php
+³   ³               DuplexStreamInterface.php
+³   ³               ReadableResourceStream.php
+³   ³               ReadableStreamInterface.php
+³   ³               ThroughStream.php
+³   ³               Util.php
+³   ³               WritableResourceStream.php
+³   ³               WritableStreamInterface.php
+³   ³               
+³   ÀÄÄÄsymfony
+³       ÃÄÄÄdeprecation-contracts
+³       ³       CHANGELOG.md
+³       ³       composer.json
+³       ³       function.php
+³       ³       LICENSE
+³       ³       README.md
+³       ³       
+³       ÃÄÄÄhttp-foundation
+³       ³   ³   AcceptHeader.php
+³       ³   ³   AcceptHeaderItem.php
+³       ³   ³   BinaryFileResponse.php
+³       ³   ³   ChainRequestMatcher.php
+³       ³   ³   CHANGELOG.md
+³       ³   ³   composer.json
+³       ³   ³   Cookie.php
+³       ³   ³   ExpressionRequestMatcher.php
+³       ³   ³   FileBag.php
+³       ³   ³   HeaderBag.php
+³       ³   ³   HeaderUtils.php
+³       ³   ³   InputBag.php
+³       ³   ³   IpUtils.php
+³       ³   ³   JsonResponse.php
+³       ³   ³   LICENSE
+³       ³   ³   ParameterBag.php
+³       ³   ³   README.md
+³       ³   ³   RedirectResponse.php
+³       ³   ³   Request.php
+³       ³   ³   RequestMatcher.php
+³       ³   ³   RequestMatcherInterface.php
+³       ³   ³   RequestStack.php
+³       ³   ³   Response.php
+³       ³   ³   ResponseHeaderBag.php
+³       ³   ³   ServerBag.php
+³       ³   ³   StreamedJsonResponse.php
+³       ³   ³   StreamedResponse.php
+³       ³   ³   UriSigner.php
+³       ³   ³   UrlHelper.php
+³       ³   ³   
+³       ³   ÃÄÄÄException
+³       ³   ³       BadRequestException.php
+³       ³   ³       ConflictingHeadersException.php
+³       ³   ³       JsonException.php
+³       ³   ³       RequestExceptionInterface.php
+³       ³   ³       SessionNotFoundException.php
+³       ³   ³       SuspiciousOperationException.php
+³       ³   ³       UnexpectedValueException.php
+³       ³   ³       
+³       ³   ÃÄÄÄFile
+³       ³   ³   ³   File.php
+³       ³   ³   ³   Stream.php
+³       ³   ³   ³   UploadedFile.php
+³       ³   ³   ³   
+³       ³   ³   ÀÄÄÄException
+³       ³   ³           AccessDeniedException.php
+³       ³   ³           CannotWriteFileException.php
+³       ³   ³           ExtensionFileException.php
+³       ³   ³           FileException.php
+³       ³   ³           FileNotFoundException.php
+³       ³   ³           FormSizeFileException.php
+³       ³   ³           IniSizeFileException.php
+³       ³   ³           NoFileException.php
+³       ³   ³           NoTmpDirFileException.php
+³       ³   ³           PartialFileException.php
+³       ³   ³           UnexpectedTypeException.php
+³       ³   ³           UploadException.php
+³       ³   ³           
+³       ³   ÃÄÄÄRateLimiter
+³       ³   ³       AbstractRequestRateLimiter.php
+³       ³   ³       PeekableRequestRateLimiterInterface.php
+³       ³   ³       RequestRateLimiterInterface.php
+³       ³   ³       
+³       ³   ÃÄÄÄRequestMatcher
+³       ³   ³       AttributesRequestMatcher.php
+³       ³   ³       ExpressionRequestMatcher.php
+³       ³   ³       HostRequestMatcher.php
+³       ³   ³       IpsRequestMatcher.php
+³       ³   ³       IsJsonRequestMatcher.php
+³       ³   ³       MethodRequestMatcher.php
+³       ³   ³       PathRequestMatcher.php
+³       ³   ³       PortRequestMatcher.php
+³       ³   ³       SchemeRequestMatcher.php
+³       ³   ³       
+³       ³   ÃÄÄÄSession
+³       ³   ³   ³   FlashBagAwareSessionInterface.php
+³       ³   ³   ³   Session.php
+³       ³   ³   ³   SessionBagInterface.php
+³       ³   ³   ³   SessionBagProxy.php
+³       ³   ³   ³   SessionFactory.php
+³       ³   ³   ³   SessionFactoryInterface.php
+³       ³   ³   ³   SessionInterface.php
+³       ³   ³   ³   SessionUtils.php
+³       ³   ³   ³   
+³       ³   ³   ÃÄÄÄAttribute
+³       ³   ³   ³       AttributeBag.php
+³       ³   ³   ³       AttributeBagInterface.php
+³       ³   ³   ³       
+³       ³   ³   ÃÄÄÄFlash
+³       ³   ³   ³       AutoExpireFlashBag.php
+³       ³   ³   ³       FlashBag.php
+³       ³   ³   ³       FlashBagInterface.php
+³       ³   ³   ³       
+³       ³   ³   ÀÄÄÄStorage
+³       ³   ³       ³   MetadataBag.php
+³       ³   ³       ³   MockArraySessionStorage.php
+³       ³   ³       ³   MockFileSessionStorage.php
+³       ³   ³       ³   MockFileSessionStorageFactory.php
+³       ³   ³       ³   NativeSessionStorage.php
+³       ³   ³       ³   NativeSessionStorageFactory.php
+³       ³   ³       ³   PhpBridgeSessionStorage.php
+³       ³   ³       ³   PhpBridgeSessionStorageFactory.php
+³       ³   ³       ³   SessionStorageFactoryInterface.php
+³       ³   ³       ³   SessionStorageInterface.php
+³       ³   ³       ³   
+³       ³   ³       ÃÄÄÄHandler
+³       ³   ³       ³       AbstractSessionHandler.php
+³       ³   ³       ³       IdentityMarshaller.php
+³       ³   ³       ³       MarshallingSessionHandler.php
+³       ³   ³       ³       MemcachedSessionHandler.php
+³       ³   ³       ³       MigratingSessionHandler.php
+³       ³   ³       ³       MongoDbSessionHandler.php
+³       ³   ³       ³       NativeFileSessionHandler.php
+³       ³   ³       ³       NullSessionHandler.php
+³       ³   ³       ³       PdoSessionHandler.php
+³       ³   ³       ³       RedisSessionHandler.php
+³       ³   ³       ³       SessionHandlerFactory.php
+³       ³   ³       ³       StrictSessionHandler.php
+³       ³   ³       ³       
+³       ³   ³       ÀÄÄÄProxy
+³       ³   ³               AbstractProxy.php
+³       ³   ³               SessionHandlerProxy.php
+³       ³   ³               
+³       ³   ÀÄÄÄTest
+³       ³       ÀÄÄÄConstraint
+³       ³               RequestAttributeValueSame.php
+³       ³               ResponseCookieValueSame.php
+³       ³               ResponseFormatSame.php
+³       ³               ResponseHasCookie.php
+³       ³               ResponseHasHeader.php
+³       ³               ResponseHeaderLocationSame.php
+³       ³               ResponseHeaderSame.php
+³       ³               ResponseIsRedirected.php
+³       ³               ResponseIsSuccessful.php
+³       ³               ResponseIsUnprocessable.php
+³       ³               ResponseStatusCodeSame.php
+³       ³               
+³       ÃÄÄÄpolyfill-mbstring
+³       ³   ³   bootstrap.php
+³       ³   ³   bootstrap80.php
+³       ³   ³   composer.json
+³       ³   ³   LICENSE
+³       ³   ³   Mbstring.php
+³       ³   ³   README.md
+³       ³   ³   
+³       ³   ÀÄÄÄResources
+³       ³       ÀÄÄÄunidata
+³       ³               caseFolding.php
+³       ³               lowerCase.php
+³       ³               titleCaseRegexp.php
+³       ³               upperCase.php
+³       ³               
+³       ÃÄÄÄpolyfill-php83
+³       ³   ³   bootstrap.php
+³       ³   ³   bootstrap81.php
+³       ³   ³   composer.json
+³       ³   ³   LICENSE
+³       ³   ³   Php83.php
+³       ³   ³   README.md
+³       ³   ³   
+³       ³   ÀÄÄÄResources
+³       ³       ÀÄÄÄstubs
+³       ³               DateError.php
+³       ³               DateException.php
+³       ³               DateInvalidOperationException.php
+³       ³               DateInvalidTimeZoneException.php
+³       ³               DateMalformedIntervalStringException.php
+³       ³               DateMalformedPeriodStringException.php
+³       ³               DateMalformedStringException.php
+³       ³               DateObjectError.php
+³       ³               DateRangeError.php
+³       ³               Override.php
+³       ³               SQLite3Exception.php
+³       ³               
+³       ÀÄÄÄrouting
+³           ³   Alias.php
+³           ³   CHANGELOG.md
+³           ³   CompiledRoute.php
+³           ³   composer.json
+³           ³   LICENSE
+³           ³   README.md
+³           ³   RequestContext.php
+³           ³   RequestContextAwareInterface.php
+³           ³   Route.php
+³           ³   RouteCollection.php
+³           ³   RouteCompiler.php
+³           ³   RouteCompilerInterface.php
+³           ³   Router.php
+³           ³   RouterInterface.php
+³           ³   
+³           ÃÄÄÄAnnotation
+³           ³       Route.php
+³           ³       
+³           ÃÄÄÄAttribute
+³           ³       Route.php
+³           ³       
+³           ÃÄÄÄDependencyInjection
+³           ³       AddExpressionLanguageProvidersPass.php
+³           ³       RoutingResolverPass.php
+³           ³       
+³           ÃÄÄÄException
+³           ³       ExceptionInterface.php
+³           ³       InvalidArgumentException.php
+³           ³       InvalidParameterException.php
+³           ³       MethodNotAllowedException.php
+³           ³       MissingMandatoryParametersException.php
+³           ³       NoConfigurationException.php
+³           ³       ResourceNotFoundException.php
+³           ³       RouteCircularReferenceException.php
+³           ³       RouteNotFoundException.php
+³           ³       RuntimeException.php
+³           ³       
+³           ÃÄÄÄGenerator
+³           ³   ³   CompiledUrlGenerator.php
+³           ³   ³   ConfigurableRequirementsInterface.php
+³           ³   ³   UrlGenerator.php
+³           ³   ³   UrlGeneratorInterface.php
+³           ³   ³   
+³           ³   ÀÄÄÄDumper
+³           ³           CompiledUrlGeneratorDumper.php
+³           ³           GeneratorDumper.php
+³           ³           GeneratorDumperInterface.php
+³           ³           
+³           ÃÄÄÄLoader
+³           ³   ³   AnnotationClassLoader.php
+³           ³   ³   AnnotationDirectoryLoader.php
+³           ³   ³   AnnotationFileLoader.php
+³           ³   ³   AttributeClassLoader.php
+³           ³   ³   AttributeDirectoryLoader.php
+³           ³   ³   AttributeFileLoader.php
+³           ³   ³   ClosureLoader.php
+³           ³   ³   ContainerLoader.php
+³           ³   ³   DirectoryLoader.php
+³           ³   ³   GlobFileLoader.php
+³           ³   ³   ObjectLoader.php
+³           ³   ³   PhpFileLoader.php
+³           ³   ³   Psr4DirectoryLoader.php
+³           ³   ³   XmlFileLoader.php
+³           ³   ³   YamlFileLoader.php
+³           ³   ³   
+³           ³   ÃÄÄÄConfigurator
+³           ³   ³   ³   AliasConfigurator.php
+³           ³   ³   ³   CollectionConfigurator.php
+³           ³   ³   ³   ImportConfigurator.php
+³           ³   ³   ³   RouteConfigurator.php
+³           ³   ³   ³   RoutingConfigurator.php
+³           ³   ³   ³   
+³           ³   ³   ÀÄÄÄTraits
+³           ³   ³           AddTrait.php
+³           ³   ³           HostTrait.php
+³           ³   ³           LocalizedRouteTrait.php
+³           ³   ³           PrefixTrait.php
+³           ³   ³           RouteTrait.php
+³           ³   ³           
+³           ³   ÀÄÄÄschema
+³           ³       ÀÄÄÄrouting
+³           ³               routing-1.0.xsd
+³           ³               
+³           ÃÄÄÄMatcher
+³           ³   ³   CompiledUrlMatcher.php
+³           ³   ³   ExpressionLanguageProvider.php
+³           ³   ³   RedirectableUrlMatcher.php
+³           ³   ³   RedirectableUrlMatcherInterface.php
+³           ³   ³   RequestMatcherInterface.php
+³           ³   ³   TraceableUrlMatcher.php
+³           ³   ³   UrlMatcher.php
+³           ³   ³   UrlMatcherInterface.php
+³           ³   ³   
+³           ³   ÀÄÄÄDumper
+³           ³           CompiledUrlMatcherDumper.php
+³           ³           CompiledUrlMatcherTrait.php
+³           ³           MatcherDumper.php
+³           ³           MatcherDumperInterface.php
+³           ³           StaticPrefixCollection.php
+³           ³           
+³           ÀÄÄÄRequirement
+³                   EnumRequirement.php
+³                   Requirement.php
+³                   
+ÀÄÄÄws-server
+        ChatServer.php
+        server.php
+        

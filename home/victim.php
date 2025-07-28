@@ -132,7 +132,7 @@ session_start();
                     <div class="hero_cont">
 
                         <h2>Welcome, <?php echo $_SESSION["username"] ?> </h2>
-                        <div><p><i>"The moment my hands left the rail, I knew I didn’t want to die. I just needed someone to see my pain."— Kevin Hines</i></p></div>
+                        <div><p><i>"The moment my hands left the rail! I knew I didn’t want to die. I just needed someone to see my pain."— Kevin Hines</i></p></div>
                         <h1>COMING SOON!</h1>
 
                     </div>
