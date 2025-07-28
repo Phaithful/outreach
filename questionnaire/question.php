@@ -1,5 +1,5 @@
 <?php
-include "qauth/questionnaire.php"
+//include "qauth/questionnaire.php"
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +75,7 @@ include "qauth/questionnaire.php"
             <div class="row mb-3">
                 <div class="mb-3 col-md-6">
                     <label for="email" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="email" name="email" required value=" <?php echo $_SESSION["email"] ?>" readonly >
+                    <input type="email" class="form-control" id="email" name="email" required value=" <?php //echo $_SESSION["email"] ?>" readonly >
                 </div>
 
                 <div class="mb-3 col-md-6">
@@ -100,7 +100,7 @@ include "qauth/questionnaire.php"
                         <option value="bphdsc">PhD</option>
                         <option value="other">Other</option>
                     </select>
-                    <p style="color: red;"> <?php echo $errors["qualification"] ?> </p>
+                    <p style="color: red;"> <?php //echo $errors["qualification"] ?> </p>
                 </div>
 
                 <div class="mb-3 col-md-6">
@@ -110,7 +110,7 @@ include "qauth/questionnaire.php"
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
-                    <p style="color: red;"> <?php echo $errors["licensed"] ?> </p>
+                    <p style="color: red;"> <?php //echo $errors["licensed"] ?> </p>
                 </div>
             </div>
 
@@ -119,7 +119,7 @@ include "qauth/questionnaire.php"
             <div class="mb-5">
                 <label for="licenseUpload" class="form-label">Upload Certificate (optional) </label>
                 <input class="form-control" type="file" id="licenseUpload" name="licenseUpload" accept=".jpg,.png,.pdf">
-                <p style="color: red;"> <?php echo $errors["upload"] ?> </p>
+                <p style="color: red;"> <?php //echo $errors["upload"] ?> </p>
             </div>
 
 
@@ -127,7 +127,7 @@ include "qauth/questionnaire.php"
             <div class="mb-3">
                 <label for="motivation" class="form-label">Why do you want to volunteer with Outreach?</label>
                 <textarea class="form-control" id="motivation" name="motivation" rows="3" required placeholder="What is your motivation..."></textarea>
-                <p style="color: red;"> <?php echo $errors["motivation"] ?> </p>
+                <p style="color: red;"> <?php //echo $errors["motivation"] ?> </p>
             </div>
 
             <div class="mb-3">
@@ -136,7 +136,7 @@ include "qauth/questionnaire.php"
                     <option selected disabled value="">Select</option>
                     <option value="no">No</option>
                     <option value="yes">Yes</option>
-                    <p style="color: red;"> <?php echo $errors["misconduct"] ?> </p>
+                    <p style="color: red;"> <?php //echo $errors["misconduct"] ?> </p>
                 </select>
             </div>
 

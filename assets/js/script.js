@@ -44,6 +44,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+    // Respect user motion preferences
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!prefersReducedMotion) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.querySelectorAll("[data-animate]").forEach((el) => {
+        const animationType = el.dataset.animate;
+        let fromVars = { opacity: 0 };
+
+        // Choose direction based on animation type
+        switch (animationType) {
+
+        case "fade-up":
+            fromVars.y = 60;        
+            fromVars.autoAlpha = 0; 
+            break;
+
+        case "fade-down":
+            fromVars.y = -30;
+            break;
+
+        case "slide-left":
+            fromVars.x = -100;
+            break;
+
+        case "slide-right":
+            fromVars.x = 100;
+            break;
+
+        default:
+            break;
+        }
+
+        // Check if it belongs to a group that should stagger
+        const isStaggerGroup =
+        el.classList.contains("case-box") ||
+        el.parentElement?.classList.contains("stat");
+
+        // Animate element with optional stagger
+        gsap.from(el, {
+        ...fromVars,
+        duration: 1,
+        autoAlpha: 0,
+        ease: "power2.out",
+        stagger: isStaggerGroup ? 0.2 : 0,
+        scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none reset", // re-animate on re-enter
+        }
+        });
+    });
+    }
+
+
+
+
     // Swiper Js
     const swiper = new Swiper(".partnerSwiper", {
     slidesPerView: "auto",
@@ -69,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     swiperEl.addEventListener('mouseleave', () => {
     swiper.autoplay.start();
     });
+
 
 
 
@@ -145,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
+    // login & Sign up modals
     const modal = document.getElementById('registerModal');
     const registerBtn = document.getElementById('registerBtn');
     const loginModal = document.getElementById('loginModal');
@@ -179,6 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+    // liking testimonies
     document.querySelectorAll('.like').forEach(button => {
         button.addEventListener('click', () => {
             button.classList.toggle('liked');

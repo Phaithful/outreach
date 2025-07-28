@@ -1,75 +1,92 @@
-const sentences = [
-  "Ever wished you could help someone feel",
-  "less alone or hopeless?",
-  "Your words might be the lifeline ",
-  "someone is ernestly searching for.",
-  "Be the voice of calm in someone’s storm.",
-  "Join the OUTREACH Community ",
-  "of compassionate listeners Today!"
-];
+document.addEventListener('DOMContentLoaded', () =>{
 
-const typedText = document.getElementById("typedText");
-let sentenceIndex = 0;
-let charIndex = 0;
+  // Toggle password visibility
+  const togglePassword = document.getElementById('togglePassword');
+  const toggleConfirmPassword = document.getElementById('toggleCPassword');
+  const passwordInput = document.getElementById('password');
+  const cPasswordInput = document.getElementById('cpassword');
 
-function typeSentence() {
-  const currentSentence = sentences[sentenceIndex];
-  
-  if (charIndex < currentSentence.length) {
-    typedText.textContent += currentSentence.charAt(charIndex);
-    charIndex++;
-    setTimeout(typeSentence, 130); 
-  } else {
- 
-    setTimeout(() => {
-      typedText.textContent = '';
-      charIndex = 0;
-      sentenceIndex++;
-      if (sentenceIndex < sentences.length) {
-        typeSentence();
-      } else {
-
-        sentenceIndex = 0; typeSentence(); 
-      }
-    }, 300); 
-  }
-}
-
-typeSentence();
+  togglePassword.addEventListener('click', function () {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
 
 
-
-// Toggle password visibility
-const togglePassword = document.getElementById('togglePassword');
-const toggleConfirmPassword = document.getElementById('toggleCPassword');
-const passwordInput = document.getElementById('password');
-const cPasswordInput = document.getElementById('cpassword');
-
-togglePassword.addEventListener('click', function () {
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
+      // Toggle icon
+      this.classList.toggle('fa-eye');
+      this.classList.toggle('fa-eye-slash');
+  });
 
 
-    // Toggle icon
-    this.classList.toggle('fa-eye');
-    this.classList.toggle('fa-eye-slash');
-});
+  toggleConfirmPassword.addEventListener("click", function(){
+
+      const type = cPasswordInput.getAttribute("type") === 'password' ? 'text' : 'password';
+
+      cPasswordInput.setAttribute('type', type);
 
 
-toggleConfirmPassword.addEventListener("click", function(){
+      // Toggle icon
+      this.classList.toggle('fa-eye');
+      this.classList.toggle('fa-eye-slash');
 
-    const type = cPasswordInput.getAttribute("type") === 'password' ? 'text' : 'password';
-
-    console.log('Changing confirm password input type to:', type);  // Add this
-    cPasswordInput.setAttribute('type', type);
-
-    console.log(toggleConfirmPassword);
+  })
 
 
-    // Toggle icon
-    this.classList.toggle('fa-eye');
-    this.classList.toggle('fa-eye-slash');
+  passwordInput.addEventListener('input', () => {
+
+    const weak = document.getElementById('weak');
+    const average = document.getElementById('average');
+    const strong = document.getElementById('strong');
+
+     const value = passwordInput.value;
+
+    // Reset indicators
+    weak.style.color = 'gray';
+    average.style.color = 'gray';
+    strong.style.color = 'gray';
+
+    const weakRegex = /^.{1,5}$/;
+    const averageRegex = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
+    const strongRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])[a-zA-Z\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{8,}$/;
+
+    if (strongRegex.test(value)) {
+      strong.style.backgroundColor = '#5cb85c';
+      average.style.backgroundColor = '#5cb85c';
+      weak.style.backgroundColor = '#5cb85c';
+
+      strong.style.width = '100%'
+      average.style.width = '100%'
+      weak.style.width = '100%'
+      
+    } else if (averageRegex.test(value)) {
+      average.style.backgroundColor = '#ffa204';
+      weak.style.backgroundColor = '#ffa204';
+      strong.style.backgroundColor = '#ffa204';
+      
+      strong.style.width = '0'
+      average.style.width = '100%'
+      weak.style.width = '100%'
+
+    } else if (weakRegex.test(value)) {
+      weak.style.backgroundColor = 'red';
+      average.style.backgroundColor = 'red';
+      strong.style.backgroundColor = 'red';
+      
+      weak.style.width = '100%'
+      average.style.width = '0'
+      strong.style.width = '0'
+
+    } else if (value === ''){
+      weak.style.width = '0'
+      average.style.width = '0'
+      strong.style.width = '0'
+    }
+
+
+
+  })
 
 })
+
+
 
 

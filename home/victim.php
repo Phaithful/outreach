@@ -5,7 +5,7 @@ session_start();
 <?php echo $_SESSION["username"] ?>
 
 <?php if ($_SESSION["role"] == 3) { ?>
-    <!-- // start writing font end code from here -->
+    <!--  start writing font end code from here -->
 
     <!DOCTYPE html>
     <html lang="en">
@@ -48,7 +48,7 @@ session_start();
                     </div>
 
                     <div class="close" id="closeBtn">
-                        <span class="material-symbols-sharp">close</span>
+                        <span class="material-symbols-outlined">close</span>
                     </div>
                 </div>
                 <!-- Top section of the side bar ending -->
@@ -103,6 +103,12 @@ session_start();
                         </a>
                     </div>
 
+                    <div class="menu" id="menuBtn">
+                        <button>
+                            <span class="material-symbols-outlined">segment</span>
+                        </button>
+                    </div>
+
 
                     <div class="profile_info">
 
@@ -143,7 +149,7 @@ session_start();
 
         </div>
 
-
+    <script src="assets/js/victim.js"></script>
         
     </body>
     </html>
