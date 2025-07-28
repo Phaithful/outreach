@@ -79,7 +79,7 @@
         <div class="modal_content">
             <div class="as_professional">
                 <img src="images/voice.png" alt="">
-                <a href="plogin.php">Login in as Patient</a>
+                <a href="plogin.php">Login in as Voice</a>
             </div>
             <hr>
             <div class="as_student">
@@ -96,7 +96,7 @@
         <div class="modal_content">
             <div class="as_school">
                 <img src="images/voice.png" alt="">
-                <a href="psignup.php">Sign in as Patient</a>
+                <a href="psignup.php">Sign in as Voice</a>
             </div>
             <hr>
             <div class="as_professional">
@@ -601,7 +601,7 @@
                 <div class="col-12 col-md-7">
                     <div data-animate="slide-right">
 
-                        <div class="input_div">  
+                        <div class="input_div">
                             <input type="email" name="newsletter" placeholder="Email...">
                             <button type="submit" name="news_submit" class="arrow">
                                 <span class="material-symbols-outlined ">keyboard_tab</span>
@@ -701,9 +701,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
