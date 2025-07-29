@@ -64,8 +64,8 @@ if (!$chat_id) {
                     <h3>Home</h3>
                 </a>
 
-                <a href="" >
-                    <span class="material-symbols-outlined active">chat</span>
+                <a href="" class="active">
+                    <span class="material-symbols-outlined">chat</span>
                     <h3>Chat</h3>
                 </a>
 
@@ -130,20 +130,24 @@ if (!$chat_id) {
 
                     <div class="title">
                         <h1>Chat<span>.</span></h1>
+
+                        <button>
+                            End Chat
+                        </button>
                     </div>
 
                     <div class="content">
                         <div class="container">
-                            <h4>Live Chat - Chat ID: <?= htmlspecialchars($chat_id) ?></h4>
+
                             <div class="chat">
                                 <div id="chat-box" class="chat-box d-flex flex-column mb-3"></div>
                                 <form id="chat-form" class="d-flex"  onsubmit="return false;">
-                                    <div class="send-div">
-                                        <input type="text" id="message-input" class="form-control" placeholder="Type a message..." autocomplete="off">
-                                        <button type="submit" class="btn btn-success ms-2">
-                                            <span class="material-symbols-outlined">send</span>
-                                        </button>
-                                    </div>     
+
+                                    <input type="text" id="message-input" class="form-control" placeholder="Type a message..." autocomplete="off">
+                                    <button type="submit" class="btn btn-success ms-2">
+                                        <span class="material-symbols-outlined">send</span>
+                                    </button>
+    
                                 </form>
                             </div>
                             
@@ -163,6 +167,93 @@ if (!$chat_id) {
 
     </div>
 
+
+
+
+
+    
+    <script>
+    const user_id = <?= $_SESSION["user_id"] ?>;
+    const chat_id = "<?= $chat_id ?>";
+
+    const chatBox = document.getElementById("chat-box");
+    const form = document.getElementById("chat-form");
+    const input = document.getElementById("message-input");
+
+    const socket = new WebSocket("ws://localhost:8000/chat");
+
+
+    // 🧠 Append message to UI
+    function appendMessage(message, senderId) {
+        const div = document.createElement("div");
+        div.classList.add("chat-bubble");
+        div.classList.add(senderId == user_id ? "you" : "other");
+        div.textContent = message;
+        chatBox.appendChild(div);
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // 🧠 Handle incoming WebSocket message
+    socket.onmessage = event => {
+        try {
+            const { message, sender_id } = JSON.parse(event.data);
+            appendMessage(message, sender_id); // show to both sender and receiver
+        } catch (err) {
+            console.warn("Invalid WebSocket data received:", event.data);
+        }
+    };
+
+    // 🧠 Send message on form submit
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const message = input.value.trim();
+        if (message === "") return;
+
+        const payload = {
+            sender_id: user_id,
+            message: message
+        };
+
+        // ✅ Send via WebSocket
+        socket.send(JSON.stringify(payload));
+
+        // ✅ Save to DB
+        console.log("Sending message to backend...", { message, chat_id });
+        fetch("chat-flow/chat_view.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: message, chat_id: chat_id }) // ✅ Only send message & chat_id
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("RESPONSE:", data);
+            if (data.status !== "Message saved") {
+                console.error("❌ DB Error Response:", data);
+                alert("⚠️ Could not save message to database.");
+            }
+        })
+        .catch(error => {
+            console.error("❌ Fetch/Network Error:", error);
+            alert("❌ Could not reach server to save message.");
+        });
+
+        input.value = "";
+    });
+
+    // 🧠 Load existing messages on page load
+    function loadMessages() {
+        fetch(`chat-flow/chat_view.php?chat_id=${chat_id}`)
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(msg => appendMessage(msg.message, msg.sender_id));
+            })
+            .catch(error => {
+                console.error("❌ Error loading messages:", error);
+            });
+    }
+    loadMessages();
+    </script>
 
     
 </body>

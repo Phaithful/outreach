@@ -87,6 +87,10 @@ body, html {
 
 .home{
   padding-bottom: 30px;
+  background-image: url(../images/cloud.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 

@@ -38,6 +38,7 @@ body{
     background: #e6e6eb;
     overflow: hidden;
     color: #262626;
+    position: relative;
     
 }
 
@@ -267,13 +268,16 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
+    overflow: hidden;
     /* background: radial-gradient(circle,#caaee5 0%, #fc9bc8 100%); */
 }
 
 .hero_cont .title{
     width: 100%;
     padding: 0px 35px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
 }
 
 .hero_cont .title h1 span{
@@ -286,6 +290,14 @@ main{
     padding-left: 8px;
 }
 
+.hero_cont .title button{
+    padding: 5px 25px;
+    background-color: var(--font-black);
+    color: white;
+    border-radius: 18px;
+    margin-top: 8px;
+    cursor: pointer;
+}
 
 .hero_cont .content{
     height: 90%;
@@ -301,14 +313,30 @@ main{
 .hero_cont .content .container{
     display: flex;
     flex-direction: column;
-    height: 90%;
+    height: 100%;
 }
 
 
 .chat{
     height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(../images/chat_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+
+#chat-form{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    padding: 0 3px;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+}
 
 #chat-form input{
     height: 40px;
@@ -317,51 +345,54 @@ main{
     background-color: transparent;
 }
 
-.send-div{
-    display: flex;
-    height: 40px;
-    width: 100%;
-    padding: 0 3px;
-    background-color: white;
-}
 
-.send-div input{
-    width: 98%;
-}
-
-.send-div button{
+#chat-form button{
     width: 2%;
     background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-59%);
+    right: 25px;
+    cursor: pointer;
 }
 
-
+#chat-form button span{
+    font-size: 1.7rem;
+}
 
 
 .chat-box {
     height: 100%;
+    width: 100%;
     overflow-y: auto;
     padding: 10px;
     background: transparent;
     border: 1px solid #ccc;
     margin-bottom: 14px;
-
+    position: absolute;
+    bottom: 50px;
+    padding-top: 80px;
 }
+
 .chat-bubble {
     max-width: 70%;
     padding: 10px;
     margin: 5px 0;
     border-radius: 12px;
     word-wrap: break-word;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .you {
     background-color: #d4edda;
     color: #155724;
     align-self: flex-end;
     margin-left: auto;
+    width: 35%;
 }
 .other {
     background-color: #cce5ff;
     color: #004085;
     align-self: flex-start;
     margin-right: auto;
+    width: 35%;
 }
