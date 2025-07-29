@@ -90,7 +90,7 @@
                 <a class="forgot" href="pforgot_password.php">Forgot Password?</a>
 
                 <div class="d-grid mt-3 col-12 col-md-6">
-                    <input type="submit" class="btn btn-primary submit" name="v_submit" value="Reconnect Now">
+                    <input type="submit" class="btn btn-primary submit" name="t_submit" value="Reconnect Now">
                 </div>
 
             </form>

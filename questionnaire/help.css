@@ -38,7 +38,6 @@ body{
     background: #e6e6eb;
     overflow-x: hidden !important;
     color: #262626;
-    
 }
 
 .containerss{
@@ -194,7 +193,7 @@ aside .sidebar a:hover span{
 
 aside .sidebar a.active{
     background: var(--color-light);
-    color: var(--color-dark);
+    color: var(--pink);
     margin-left: 0 !important;
 }
 
@@ -202,11 +201,11 @@ aside .sidebar a.active::before{
     content: '' !important;
     width: 6px !important;
     height: 100% !important;
-    background-color: var(--color-dark);
+    background-color: var(--pink);
 }
 
 aside .sidebar a.active span{
-    color: var(--color-dark);
+    color: var(--pink);
     margin-left: calc(1rem - 3px) !important;
 }
 
@@ -296,6 +295,7 @@ main{
 }
      
 
+
 .hero_cont{
     width: 97% !important;
     height: 97% !important;
@@ -306,6 +306,11 @@ main{
     align-items: center !important;
     padding-bottom: 30px !important;
     /* background: radial-gradient(circle,#caaee5 0%, #fc9bc8 100%); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(../images/chat_bg.png);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 

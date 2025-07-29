@@ -57,8 +57,8 @@
             <!-- Collapsible Nav -->
             <div class="collapse navbar-collapse flex-grow-1 justify-content-end align-items-center mt-3 mt-lg-0" id="navbarNavDropdown">
                 <div class="d-flex flex-column flex-lg-row gap-2 w-lg-auto">
-                    <button class="btn login w-md-100 " id="registerBtn">Login</button>
-                    <button class="btn signup w-md-100 " id="loginBtn">Sign Up</button>
+                    <button class="btn login w-md-100 " id="loginBtn">Login</button>
+                    <button class="btn signup w-md-100 " id="registerBtn">Sign Up</button>
                 </div>
             </div>
 
@@ -74,7 +74,7 @@
 
 
     <!-- signup modal -->
-    <div class="register_modal" id="registerModal">
+    <div class="login_modal" id="loginModal">
 
         <div class="modal_content">
             <div class="as_professional">
@@ -91,7 +91,7 @@
     </div>
 
     <!-- login modal -->
-    <div class="login_modal" id="loginModal">
+    <div class="register_modal" id="registerModal">
 
         <div class="modal_content">
             <div class="as_school">
@@ -125,13 +125,19 @@
         
 
         <div class="content">
-            <div class="tag">
-                <span class="material-symbols-outlined">psychiatry</span>
-                <p>Inspiring Hope • Healing Hearts</p>
+            <div class="cont">
+                <div class="tag">
+                    <span class="material-symbols-outlined">psychiatry</span>
+                    <p>Inspiring Hope • Healing Hearts</p>
+                </div>
+                
+                <div>
+                    <h1 class="fade-item delay-2">You’ve <span class="c1" style="color: #0ea5e9;">Held</span> It In Long <span class="c2" style="color: #db2777;">Enough</span>.</h1>
+                </div>
             </div>
+            
 
-            <h1 class="fade-item delay-2">You’ve <span class="c1" style="color: #0ea5e9;">Held</span> It In Long <span class="c2" style="color: #db2777;">Enough</span>.</h1>
-            <p class="fade-item delay-3">
+            <p class="fade-item delay-3 des">
                 In the quiet moments of struggle, a kind voice can change everything. <br>
                 Outreach is your space to share, reflect, and begin again<br>
                 in your own words, at your own pace.
@@ -301,9 +307,6 @@
                 
                 <div class="case-box bg-light text-center p-4" data-animate="fade-up">
                     <img src="images/private.png" alt="">
-                    <div class="circle2-bg1">
-                        <span class="material-symbols-outlined SI1">safety_divider</span>
-                    </div>
                     <h3>Private Therapy Sessions</h3>
 
                     <p>
@@ -319,9 +322,6 @@
 
                 <div class="case-box bg-light text-center p-4" data-animate="fade-up">
                     <img src="images/247.png" alt="">
-                    <div class="circle2-bg2">
-                        <span class="material-symbols-outlined SI2">schedule</span>
-                    </div>
                     <h3>24/7 Emotional Support</h3>
                     <p>
                         Emotions don’t follow a 9-to-5. That’s why we’re here day and night, ready to support you through 
@@ -337,9 +337,6 @@
 
                 <div class="case-box bg-light text-center p-4" data-animate="fade-up">
                     <img src="images/anonymous.png" alt="">
-                    <div class="circle2-bg3">
-                        <span class="material-symbols-outlined SI3">public_off</span>
-                    </div>
                     <h3>Total Anonymity</h3>
                     <p>
                         We understand that safety and privacy are everything. That’s why you can share openly — no names, 
@@ -492,11 +489,11 @@
 
 
 
-    <section class=" faq" id="faq">
+    <section class="faq" id="faq">
         
-        <div class="text-center mb-5">
+        <div class="text-center mb-5 intro">
             <h2 class="header">Frequently <span>Asked</span> Questions</h2>
-            <p class="text-muted ">Everything you need to know about using Outreach</p>
+            <p class="">Everything you need to know about using Outreach</p>
         </div>
 
         <div class="accordion" id="faqAccordion">

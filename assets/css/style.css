@@ -46,21 +46,18 @@ body, html {
   font-size: 1.1rem;
   background-color: white !important ;
   background: white !important; 
-  box-shadow: 0 3px 8px 0 var(--light);
+  box-shadow: 0 2px 4px 0 var(--light);
   border: none;
   animation: IntFromTop 1s ease-out forwards;
   animation-delay: 0.3s;
 }
-
-
-
 
 .navbar-brand{
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 5px;
+  gap: 3px;
 }
 
 .navbar-brand img {
@@ -71,8 +68,8 @@ body, html {
 .navbar-brand p{
   font-family: "Comfortaa", sans-serif;
   color: black !important;
-  letter-spacing: 3px;
-  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-size: 1rem;
   font-weight: 600;
   margin-left: 10px;
 }
@@ -87,20 +84,20 @@ body, html {
   background: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
   border: solid 2px rgb(203, 60, 131);
   color: white;
-  font-size: 1rem !important;
+  font-size: 0.8rem !important;
   padding: 0.4rem 2rem;
   transition: all 300ms ease-in-out !important;
-  border-radius: 15px !important;
+  border-radius: 28px !important;
 }
 
 .signup{
   background: transparent;
   color: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
   border: solid 2px rgb(203, 60, 131);
-  font-size: 1rem !important;
-  padding: 0.4rem 2rem;
+  font-size: 0.8rem !important;
+  padding: 0.3rem 1.5rem;
   transition: all 300ms ease-in-out !important;
-  border-radius: 15px !important;
+  border-radius:28px !important;
 }
 
 .login:hover{
@@ -142,8 +139,8 @@ body, html {
   position: fixed;
   z-index: 1002;
   right: 20px;
-  top: 70px;
-  width: 370px;
+  top: 90px;
+  width: 320px;
   height: 150px;
   justify-content: center;
   align-items: center;
@@ -165,8 +162,8 @@ body, html {
   position: fixed;
   z-index: 1002;
   right: 20px;
-  top: 70px;
-  width: 270px;
+  top: 90px;
+  width: 320px;
   height: 150px;
   justify-content: center;
   align-items: center;
@@ -256,9 +253,8 @@ body, html {
 .content .tag{
   position: absolute;
   top: 0;
-  left: 39%;
+  left: 40%;
   transform: translateX(-50%);
-  font-size: 10px;
   color: var(--pink);
   display: flex;
   gap: 20px;
@@ -279,19 +275,20 @@ body, html {
 .content h1{
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.4rem;
   padding: 7px;
   text-align: center;
 
 }
 
-
-
-
 .content p{
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.content .des{
+  font-size: 0.9rem;
 }
 
 .content h6{
@@ -336,9 +333,9 @@ span c2{
   align-items: center;
   justify-content: center;
   border: none;
-  width: 180px;
+  width: 160px;
   height: 40px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
   border-radius: 50px;
   transition: all 300ms ease-in-out;
@@ -372,7 +369,7 @@ span c2{
 .urgent {
   color: white ;
   font-weight: 500;
-  padding: 5px 10px !important;
+  padding: 5px 18px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -381,7 +378,7 @@ span c2{
   border: none;
   transition: all 300ms ease-in-out;
   background-size: 200% auto;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .urgent p{
@@ -631,11 +628,13 @@ span c2{
   justify-content: center;
   gap: 8px;
   color: var(--green);
+  font-size: 0.8rem;
 }
 
 .info p {
   margin: 0;
   font-weight: 900;
+  font-size: 0.8rem;
 }
 
 .mission-cont .stat div{
@@ -655,7 +654,7 @@ span c2{
 .mission .info h1{
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   padding: 12px  0;
   letter-spacing: 1px;
   margin-top: -10px;
@@ -668,6 +667,7 @@ span c2{
 
 .description{
   line-height: 23px;
+  font-size: 1rem;
 }
 
 
@@ -856,7 +856,7 @@ span c2{
 .vision .info h1{
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   padding: 12px  0;
   letter-spacing: 1px;
   margin-top: -10px;
@@ -931,12 +931,12 @@ span c2{
 }
 
 .swiper img {
-  max-height: 60px !important;
+  max-height: 90px !important;
   max-width: 100% !important;
   margin: auto !important;
   display: block !important;
   transition: transform 0.3s ease, opacity 0.3s ease !important;
-  height: 60px !important;
+  height: 90px !important;
   width: auto !important;
   opacity: 1 !important;
 }
@@ -990,12 +990,14 @@ span c2{
 .services .tag p{
   margin: 0;
   padding: 0;
+  font-size: 0.8rem;
 }
 
 .services h1{
-  font-weight: 700;
+  font-weight: 800;
   font-family: var(--pop);
   padding-bottom: 5px;
+  font-size: 2.4rem;
 }
 
 .services h1 span{
@@ -1005,6 +1007,7 @@ span c2{
 .services h6{
   text-align: center;
   padding-bottom: 10px;
+  font-size: 0.8rem;
 }
 
 
@@ -1031,13 +1034,14 @@ span c2{
 
 .case-box h3{
   font-family: var(--pop);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 800;
   padding-bottom: 8px;
 }
 
 .case-box p{
   line-height: 25px;
+  font-size: 0.8rem;
 }
 
   
@@ -1052,7 +1056,7 @@ span c2{
   width: 90%;
   height: auto;
   border-radius: 25px;
-  margin-bottom: 8px;
+  margin-bottom: 30px;
 }
 
 
@@ -1128,7 +1132,7 @@ span c2{
   align-items: center;
   justify-content: center;
   border: none;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   transition: all 300ms ease-in-out;
   gap: 15px;
   transition: 0.5s;
@@ -1322,7 +1326,7 @@ span c2{
 .reviews h3{
   color: black;
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
 
 }
@@ -1335,6 +1339,7 @@ span c2{
 
 .reviews p{
   line-height: 23px;
+  font-size: 0.8rem;
 }
 
 .review .star{
@@ -1352,12 +1357,14 @@ span c2{
 
 .review_des{
   text-align: center;
+  font-size: 0.8rem;
 }
 
 .review h1{
   font-family: var(--pop);
-  font-weight: 700;
+  font-weight: 800;
   padding-bottom: 8px;
+  font-size: 2.2rem;
 }
 
 .review h1 span{
@@ -1378,6 +1385,7 @@ span c2{
 .review .tag p{
   margin: 0;
   padding: 0;
+  font-size: 0.8rem;
 }
 
 
@@ -1452,63 +1460,37 @@ span c2{
 .faq .header{
   font-family: var(--pop);
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 2.2rem !important;
+}
+
+.faq .intro p{
+  font-size: 0.8rem !important;
 }
 
 .faq .header span{
   color: var(--pink);
 }
 
-
-
 .faq .tag p{
   margin: 0;
   padding: 0;
 }
 
+.accordion-header button{
+  font-size: 0.8rem;
+}
+
 .accordion-body{
   margin-left: 15px !important;
   color: gray;
+  font-size: 0.8rem;
 }
 
 .accordion-item{
   padding: 5px;
 }
 
-/* #faq {
-  background-color: #fef6f9; 
-  padding: 4rem 2rem;
-  border-radius: 1rem;
-}
 
-
-
-.accordion-button {
-  background-color: #fff;
-  color: #323232;
-  font-weight: 600;
-  border: none;
-  font-family: 'Poppins', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.accordion-button::after {
-  filter: invert(42%) sepia(38%) saturate(1246%) hue-rotate(309deg) brightness(95%) contrast(95%);
-}
-
-.accordion-button:hover {
-  background-color: #ffe0ec;
-}
-
-.accordion-body {
-  background-color: #fff;
-  font-size: 0.95rem;
-  color: #555;
-  border-top: 1px solid #f0f0f0;
-  font-family: 'Comfortaa', cursive;
-}
-
-*/
 
 .accordion-button:focus {
   box-shadow: none !important; 
@@ -1554,13 +1536,14 @@ span c2{
 .news h1{
   font-family: var(--pop);
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #262626;
 }
 
 .news p{
   color: #262626;
   letter-spacing: 0.5px;
+  font-size: 0.8rem;
 }
 
 .input_div{

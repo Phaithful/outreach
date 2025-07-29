@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo "// Debug: Logged in as user_id = " . ($_SESSION["user_id"] ?? 'not set');
 if (!isset($_SESSION["user_id"])) {
     header("Location: ../plogin.php");
     exit();
@@ -12,132 +11,163 @@ if (!$chat_id) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <title>Live Chat</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .chat-box {
-            height: 400px;
-            overflow-y: auto;
-            padding: 10px;
-            background: #f8f9fa;
-            border: 1px solid #ccc;
-        }
-        .chat-bubble {
-            max-width: 70%;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 12px;
-            word-wrap: break-word;
-        }
-        .you {
-            background-color: #d4edda;
-            color: #155724;
-            align-self: flex-end;
-            margin-left: auto;
-        }
-        .other {
-            background-color: #cce5ff;
-            color: #004085;
-            align-self: flex-start;
-            margin-right: auto;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+
+    <!-- Document Links -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="chat.css">
+    <link rel="icon" href="images/white_logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
 </head>
-<body class="p-3">
-<div class="container">
-    <h4>Live Chat - Chat ID: <?= htmlspecialchars($chat_id) ?></h4>
-    <div id="chat-box" class="chat-box d-flex flex-column mb-3"></div>
-    <form id="chat-form" class="d-flex"  onsubmit="return false;">
-        <input type="text" id="message-input" class="form-control" placeholder="Type a message..." autocomplete="off">
-        <button type="submit" class="btn btn-success ms-2">Send</button>
-    </form>
-</div>
 
-<script>
-const user_id = <?= $_SESSION["user_id"] ?>;
-const chat_id = "<?= $chat_id ?>";
-
-const chatBox = document.getElementById("chat-box");
-const form = document.getElementById("chat-form");
-const input = document.getElementById("message-input");
-
-const socket = new WebSocket("ws://localhost:8000/chat");
+<body>
 
 
-// 🧠 Append message to UI
-function appendMessage(message, senderId) {
-    const div = document.createElement("div");
-    div.classList.add("chat-bubble");
-    div.classList.add(senderId == user_id ? "you" : "other");
-    div.textContent = message;
-    chatBox.appendChild(div);
-    chatBox.scrollTop = chatBox.scrollHeight;
-}
+    <div class="container">
 
-// 🧠 Handle incoming WebSocket message
-socket.onmessage = event => {
-    try {
-        const { message, sender_id } = JSON.parse(event.data);
-        appendMessage(message, sender_id); // show to both sender and receiver
-    } catch (err) {
-        console.warn("Invalid WebSocket data received:", event.data);
-    }
-};
 
-// 🧠 Send message on form submit
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
 
-    const message = input.value.trim();
-    if (message === "") return;
+        <!----------------- Collapsable Side Bar ----------------------->
+        <aside>
 
-    const payload = {
-        sender_id: user_id,
-        message: message
-    };
+            <!-- Top section of the side bar [Logo & Company Name]-->
+            <div class="top">
+                <div class="logo">
+                    <img src="../images/black_logo.png" alt="logo">
+                    <h2>Outreach</h2>
+                </div>
 
-    // ✅ Send via WebSocket
-    socket.send(JSON.stringify(payload));
+                <div class="close" id="closeBtn">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
+            <!-- Top section of the side bar ending -->
 
-    // ✅ Save to DB
-    console.log("Sending message to backend...", { message, chat_id });
-    fetch("chat-flow/chat_view.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: message, chat_id: chat_id }) // ✅ Only send message & chat_id
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log("RESPONSE:", data);
-        if (data.status !== "Message saved") {
-            console.error("❌ DB Error Response:", data);
-            alert("⚠️ Could not save message to database.");
-        }
-    })
-    .catch(error => {
-        console.error("❌ Fetch/Network Error:", error);
-        alert("❌ Could not reach server to save message.");
-    });
 
-    input.value = "";
-});
+            <!-- Actual Side Bar Menu/Links -->
+            <div class="sidebar">
+                
+                <a href="../home/therapist.php">
+                    <span class="material-symbols-outlined">home_app_logo</span>
+                    <h3>Home</h3>
+                </a>
 
-// 🧠 Load existing messages on page load
-function loadMessages() {
-    fetch(`chat-flow/chat_view.php?chat_id=${chat_id}`)
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(msg => appendMessage(msg.message, msg.sender_id));
-        })
-        .catch(error => {
-            console.error("❌ Error loading messages:", error);
-        });
-}
-loadMessages();
-</script>
+                <a href="" >
+                    <span class="material-symbols-outlined active">chat</span>
+                    <h3>Chat</h3>
+                </a>
+
+                <a href="../chat/th_notification.php" >
+                    <span class="material-symbols-outlined">notifications_active</span>
+                    <h3>Notifications</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <h3>Settings</h3>
+                </a>
+
+
+                <a href="">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+                
+
+            </div>
+            <!------------------- Actual Side Bar Menu ending ------------------------->
+
+        </aside>
+        <!---------------------- Collapsable Side Bar Ending --------------------------->
+
+
+        <!---------------- Main Section --------------------->
+        <main>
+
+            <div class="main_head">
+
+                <div class="cta_button">
+                    <!-- <a href="../questionnaire/help.php">
+                        <span class="material-symbols-outlined">psychiatry</span>
+                        <p>Talk to Therapist </p>
+                    </a> -->
+                </div>
+
+
+                <div class="profile_info">
+
+                    <div class="profile-photo">
+                        <img src="../chat/avatar.png" alt="" >
+                    </div>
+
+                    <div>
+                        <p><?php echo $_SESSION["username"] ?></p>
+                    </div>
+                    <button>
+                        <span class="material-symbols-outlined">stat_minus_1</span>
+                    </button>
+                    
+                </div>
+
+            </div>
+            
+
+            <div class="hero">
+                
+                <div class="hero_cont">
+
+                    <div class="title">
+                        <h1>Chat<span>.</span></h1>
+                    </div>
+
+                    <div class="content">
+                        <div class="container">
+                            <h4>Live Chat - Chat ID: <?= htmlspecialchars($chat_id) ?></h4>
+                            <div class="chat">
+                                <div id="chat-box" class="chat-box d-flex flex-column mb-3"></div>
+                                <form id="chat-form" class="d-flex"  onsubmit="return false;">
+                                    <div class="send-div">
+                                        <input type="text" id="message-input" class="form-control" placeholder="Type a message..." autocomplete="off">
+                                        <button type="submit" class="btn btn-success ms-2">
+                                            <span class="material-symbols-outlined">send</span>
+                                        </button>
+                                    </div>     
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            
+        </main>
+        <!---------- Main Section Ending --------------------->
+
+
+    </div>
+
+
+    
 </body>
 </html>
+
+
+
+
