@@ -77,7 +77,7 @@ session_start();
                     </a>
 
 
-                    <a href="">
+                    <a href="../chat/logout.php">
                         <span class="material-symbols-outlined">logout</span>
                         <h3>Logout</h3>
                     </a>
@@ -151,7 +151,11 @@ session_start();
 
 
 
-<?php } ?>
+<?php } else{
+    header("../tlogin.php");
+    }
+    
+?>
 
 
 

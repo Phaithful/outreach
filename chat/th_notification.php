@@ -72,7 +72,7 @@ if ($_SESSION["role"] == 2) {?>
                     </a>
 
 
-                    <a href="">
+                    <a href="logout.php">
                         <span class="material-symbols-outlined">logout</span>
                         <h3>Logout</h3>
                     </a>

@@ -396,3 +396,146 @@ main{
     margin-right: auto;
     width: 35%;
 }
+
+
+
+.menu{
+    display: none;
+    padding-left: 20px;
+}
+
+.menu button{
+    background-color: transparent;
+}
+
+.menu span{
+    font-size: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px){
+    .container{
+        width: 96%;
+        grid-template-columns: 7rem auto;
+    }
+
+    aside .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    aside .logo  h2 {
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 758px){
+
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    @keyframes showMenu{
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+
+    aside.showMenu {
+        animation: showMenu 500ms ease forwards;
+    }
+    
+
+    @keyframes closeMenu{
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .cta_button{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+
+    aside.closeMenu{
+        animation: closeMenu 500ms ease forwards;
+    }
+
+
+    aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        display: none;
+    }
+
+
+    
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2{
+        display: inline;
+        padding-left: 8px;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .close{
+        display: inline-block;
+        cursor: pointer;
+        padding-right: 7px;
+    }
+
+   
+}
+
+

@@ -103,7 +103,7 @@
 
 
                 <div class="d-grid mt-3 col-12 col-md-6">
-                    <input type="submit" class="btn btn-primary submit" name="v_submit" value="Reset Password">
+                    <input type="submit" class="btn btn-primary submit" name="t_submit" value="Reset Password">
                 </div>
 
             </form>

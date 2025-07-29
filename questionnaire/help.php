@@ -74,7 +74,7 @@ include "qauth/resolve.php"
                     </a>
 
 
-                    <a href="">
+                    <a href="../chat/logout.php">
                         <span class="material-symbols-outlined">logout</span>
                         <h3>Logout</h3>
                     </a>

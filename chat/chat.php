@@ -50,7 +50,7 @@ if (!$chat_id) {
                 </div>
 
                 <div class="close" id="closeBtn">
-                    <span class="material-symbols-sharp">close</span>
+                    <span class="material-symbols-outlined">close</span>
                 </div>
             </div>
             <!-- Top section of the side bar ending -->
@@ -58,12 +58,18 @@ if (!$chat_id) {
 
             <!-- Actual Side Bar Menu/Links -->
             <div class="sidebar">
+                <?php if ($_SESSION["role"] == 2) { ?>
+                    <a href="../home/therapist.php">
+                        <span class="material-symbols-outlined">home_app_logo</span>
+                        <h3>Home</h3>
+                    </a>
+                <?php } else {?>
+                    <a href="../home/victim.php">
+                        <span class="material-symbols-outlined">home_app_logo</span>
+                        <h3>Home</h3>
+                    </a>
+                <?php } ?>
                 
-                <a href="../home/therapist.php">
-                    <span class="material-symbols-outlined">home_app_logo</span>
-                    <h3>Home</h3>
-                </a>
-
                 <a href="" class="active">
                     <span class="material-symbols-outlined">chat</span>
                     <h3>Chat</h3>
@@ -80,7 +86,7 @@ if (!$chat_id) {
                 </a>
 
 
-                <a href="">
+                <a href="logout.php">
                     <span class="material-symbols-outlined">logout</span>
                     <h3>Logout</h3>
                 </a>
@@ -98,11 +104,17 @@ if (!$chat_id) {
 
             <div class="main_head">
 
-                <div class="cta_button">
-                    <!-- <a href="../questionnaire/help.php">
+                <!-- <div class="cta_button">
+                    <a href="../questionnaire/help.php">
                         <span class="material-symbols-outlined">psychiatry</span>
                         <p>Talk to Therapist </p>
-                    </a> -->
+                    </a>
+                </div> -->
+
+                <div class="menu" id="menuBtn">
+                    <button>
+                        <span class="material-symbols-outlined">segment</span>
+                    </button>
                 </div>
 
 
@@ -120,6 +132,7 @@ if (!$chat_id) {
                     </button>
                     
                 </div>
+                
 
             </div>
             
@@ -180,7 +193,7 @@ if (!$chat_id) {
     const form = document.getElementById("chat-form");
     const input = document.getElementById("message-input");
 
-    const socket = new WebSocket("ws://localhost:8000/chat");
+    const socket = new WebSocket("ws://172.20.10.2:8000/chat");
 
 
     // 🧠 Append message to UI
