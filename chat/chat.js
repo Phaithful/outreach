@@ -1,22 +1,32 @@
-document.addEventListener ("DOMContentLoaded", function () {
-    const checkboxes = document.querySelectorAll('input[name="problems[]"]');
-    checkboxes.forEach((box) => {
-        box.addEventListener("change", function () {
-            if (this.checked) {
-                checkboxes.forEach((otherBox) => {
-                    if (otherBox !== this) {
-                        otherBox.checked = false;
-                    }
-                });
-            }
-        });
-    });
+document.addEventListener('DOMContentLoaded', () => {
+
+
+    // const button = document.getElementById('emoji-button');
+    // const input = document.getElementById('message-input');
+
+    // const picker = new EmojiButton({
+    //     position: 'top-start',
+    //     theme: 'auto'
+    // });
+
+    // button.addEventListener('click', () => {
+    //     picker.togglePicker(button);
+    // });
+
+    // picker.on('emoji', emoji => {
+    //     input.value += emoji;
+    //     input.focus();
+    // });
+
+
+
+
 
 
     const sideMenu = document.querySelector("aside");
     const menuBtn = document.querySelector("#menuBtn")
     const closeBtn = document.querySelector("#closeBtn")
-    const themeToggler = document.querySelector(".theme-toggler")
+
 
 
     // show side menu
@@ -38,5 +48,6 @@ document.addEventListener ("DOMContentLoaded", function () {
         sideMenu.style.display = 'block';
     })
 
-    
+
+
 });

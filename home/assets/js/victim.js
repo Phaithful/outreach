@@ -2,7 +2,7 @@
 const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menuBtn")
 const closeBtn = document.querySelector("#closeBtn")
-const themeToggler = document.querySelector(".theme-toggler")
+
 
 
 // show side menu

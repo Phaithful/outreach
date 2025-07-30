@@ -128,13 +128,41 @@ session_start();
                 
 
                 <div class="hero">
-                    
-                    <div class="hero_cont">
 
-                        <h2>Welcome, <?php echo $_SESSION["username"] ?> </h2>
-                        <div><p><i>"The moment my hands left the rail! I knew I didn’t want to die. I just needed someone to see my pain."— Kevin Hines</i></p></div>
-                        <h1>COMING SOON!</h1>
+                    <h1>Outreach 1.0 | Prototype Preview and Working Features</h1>
 
+                    <h2>This is the first prototype of Outreach (version 1.0), While some features are still under development, the following features are currently functional and available for testing.</h2>
+                    <div class="desc">
+
+                        <div class="points">
+                            <span class="material-symbols-outlined">lens_blur</span>
+                            <p>Talking to a Therapist: The chat system for contacting a therapist is functional. If a therapist is available, users can initiate a conversation. You can also test this by creating an account on another device as a therapist and selecting yourself to simulate a session.</p>
+                        </div>
+
+                        <div class="points">
+                            <span class="material-symbols-outlined">lens_blur</span>
+                            <p>Viewing notifications to access chats you've just entered or previously participated in is also a functional feature in this version of Outreach.</p>
+                        </div>
+
+                        <div class="points">
+                            <span class="material-symbols-outlined">lens_blur</span>
+                            <p>Creating an account is also functional.. though you probably already know that, since you wouldn't be seeing this page otherwise.</p>
+                        </div>
+
+                        <div class="points">
+                            <span class="material-symbols-outlined">lens_blur</span>
+                            <p>You can log out of your account, and you'll be redirected back to the home page, this feature is working as expected.</p>
+                        </div>
+
+                        <div class="points">
+                            <span class="material-symbols-outlined">lens_blur</span>
+                            <p>All pages are fully responsive, so you can test the interface on both mobile and desktop views.</p>
+                        </div>
+
+                        <div class="points">
+                            <p>While many more features are yet to be implemented, we're excited about the potential of Outreach and would be truly grateful for the opportunity to advance to the next round so we can fully demonstrate just how far this platform can go.</p>
+                        </div>
+                        
                     </div>
 
                 </div>

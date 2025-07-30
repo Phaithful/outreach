@@ -104,12 +104,7 @@ if (!$chat_id) {
 
             <div class="main_head">
 
-                <!-- <div class="cta_button">
-                    <a href="../questionnaire/help.php">
-                        <span class="material-symbols-outlined">psychiatry</span>
-                        <p>Talk to Therapist </p>
-                    </a>
-                </div> -->
+                <h1 class="chat-intro">Chat Session<span>...</span></h1>
 
                 <div class="menu" id="menuBtn">
                     <button>
@@ -135,41 +130,69 @@ if (!$chat_id) {
                 
 
             </div>
-            
-
-            <div class="hero">
+        
                 
-                <div class="hero_cont">
+            <div class="hero">
 
-                    <div class="title">
-                        <h1>Chat<span>.</span></h1>
+                <div class="title">
 
-                        <button>
+                    <div class="block1">
+                        <div class="chat-profile">
+                            <img src="../chat/avatar.png" alt="" class="profile-photo">
+                            <h1>John Doe</h1>
+                        </div>
+
+                        <button class="end">
                             End Chat
                         </button>
-                    </div>
-
-                    <div class="content">
-                        <div class="container">
-
-                            <div class="chat">
-                                <div id="chat-box" class="chat-box d-flex flex-column mb-3"></div>
-                                <form id="chat-form" class="d-flex"  onsubmit="return false;">
-
-                                    <input type="text" id="message-input" class="form-control" placeholder="Type a message..." autocomplete="off">
-                                    <button type="submit" class="btn btn-success ms-2">
-                                        <span class="material-symbols-outlined">send</span>
-                                    </button>
-    
-                                </form>
-                            </div>
-                            
+                                
+                        <div class="title-btn">
+                            <button>
+                                <span class="material-symbols-outlined">call</span>
+                            </button>
+                            <div></div>
+                            <button>
+                                <span class="material-symbols-outlined">videocam</span>
+                            </button>
                         </div>
                     </div>
 
+                    <div class="profile-hr"></div>
+                    
+
+                    <button class="end2">
+                        End Chat
+                    </button>
+                    
+                </div>
+
+                
+
+                <div class="content">
+                    <div class="container">
+
+                        <div class="chat">
+                            <div id="chat-box" class="chat-box d-flex flex-column mb-3"></div>
+                            <form id="chat-form" class="d-flex"  onsubmit="return false;">
+
+                                <button id="emoji-button"><span class="material-symbols-outlined" style="display: flex; align-items: center; justify-content: center">
+                                    sentiment_satisfied</span>
+                                </button>
+
+                                <input type="text" id="message-input" class="form-control" placeholder="Type a message..." autocomplete="off">
+
+                                <button type="submit" class="btn btn-success ms-2">
+                                    <span class="material-symbols-outlined">send</span>
+                                </button>
+
+                            </form>
+                        </div>
+                        
+                    </div>
                 </div>
 
             </div>
+
 
 
 
@@ -267,6 +290,10 @@ if (!$chat_id) {
     }
     loadMessages();
     </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@latest/dist/index.min.js"></script>
+    <script src="chat.js"></script>
 
     
 </body>

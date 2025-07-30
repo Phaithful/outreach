@@ -19,8 +19,8 @@ body, html {
   font-family: "Comfortaa", sans-serif;
   position: relative;
   z-index: 0;
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 
@@ -37,19 +37,6 @@ body, html {
     opacity: 1;
   }
 }
-
-
-.container,
-.section,
-#app,
-main {
-  overflow-x: hidden;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 
 
 
@@ -208,27 +195,11 @@ main {
 
 
 
-@media screen and (max-width: 992px){
-
-
-    .login_modal {
-      right: 15px;
-      top: 170px;
-    }
-
-    .register_modal {
-      right: 15px;
-      top: 170px;
-
-    }
-
-}
-
 
 .home {
   position: relative;
   height: 90vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 
@@ -500,18 +471,12 @@ span c2{
 }
 
 .down_btn span{
-  font-size: 2rem;
+  font-size: 3rem;
   animation: bounce 5s infinite;
 }
 
 
 @media screen and (max-width: 647px) {
-
-  .urgent {
-    padding: 5px 15px !important;
-    gap: 8px;
-    font-size: 1rem;
-  }
 
   #ripple-effect {
     display: none;
@@ -1831,6 +1796,13 @@ footer li{
     animation-timing-function: ease-in-out;
   }
 }
+
+
+
+
+
+
+
 
 
 

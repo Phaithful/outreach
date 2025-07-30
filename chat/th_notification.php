@@ -42,7 +42,7 @@ if ($_SESSION["role"] == 2) {?>
                     </div>
 
                     <div class="close" id="closeBtn">
-                        <span class="material-symbols-sharp">close</span>
+                        <span class="material-symbols-outlined">close</span>
                     </div>
                 </div>
                 <!-- Top section of the side bar ending -->
@@ -97,6 +97,12 @@ if ($_SESSION["role"] == 2) {?>
                         </a> -->
                     </div>
 
+                    <div class="menu" id="menuBtn">
+                        <button>
+                            <span class="material-symbols-outlined">segment</span>
+                        </button>
+                    </div>
+
 
                     <div class="profile_info">
 
@@ -115,63 +121,59 @@ if ($_SESSION["role"] == 2) {?>
 
                 </div>
                 
-
-                <div class="hero">
+                
                     
-                    <div class="hero_cont">
+                <div class="hero">
 
-                        <div class="title">
-                            <h1>Notifications<span>.</span></h1>
+                    <div class="title">
+                        <h1>Notifications<span>.</span></h1>
 
-                            <div>
-                                <form action="" class="drop_form" method="post">
-                                    <select name="filter" onchange="this.form.submit()" id="filterNotif" class="styled-select">
-                                        <option value="all"  <?php if ($filter === 'all') echo 'selected'; ?> >All</option>
-                                        <option value="unread"  <?php if ($filter === 'unread') echo 'selected'; ?> >Unread</option>
-                                        <option value="read"  <?php if ($filter === 'read') echo 'selected'; ?> >Read</option>
-                                    </select>
-                                    <span class="material-symbols-outlined dropdown-icon">keyboard_arrow_down</span>
-                                </form>
-                            </div>
+                        <div>
+                            <form action="" class="drop_form" method="post">
+                                <select name="filter" onchange="this.form.submit()" id="filterNotif" class="styled-select">
+                                    <option value="all"  <?php if ($filter === 'all') echo 'selected'; ?> >All</option>
+                                    <option value="unread"  <?php if ($filter === 'unread') echo 'selected'; ?> >Unread</option>
+                                    <option value="read"  <?php if ($filter === 'read') echo 'selected'; ?> >Read</option>
+                                </select>
+                                <span class="material-symbols-outlined dropdown-icon">keyboard_arrow_down</span>
+                            </form>
                         </div>
+                    </div>
 
-                        <div class="content">
-                            <ul class="list-group">
-                                <?php while ($row = $result->fetch_assoc()): ?>
-                                    <li class="list-group-item">
+                    <div class="content">
+                        <ul class="list-group">
+                            <?php while ($row = $result->fetch_assoc()): ?>
+                                <li class="list-group-item">
 
-                                        <div class="notif_content">
-                                            <div>
-                                                <strong><?php echo htmlspecialchars($row['title']); ?></strong>
-                                                <?php echo htmlspecialchars($row['message']); ?>
-                                            </div>
-
-                                            <div>
-                                                <small><?php echo $row['created_at']; ?></small>
-                                            </div>
+                                    <div class="notif_content">
+                                        <div>
+                                            <strong><?php echo htmlspecialchars($row['title']); ?></strong>
+                                            <?php echo htmlspecialchars($row['message']); ?>
                                         </div>
 
-                                        <?php if ($row["seen"] == 0 ) { ?>
-                                            <a class="btn btn-sm btn-primary mt-2"
-                                                href="chat-flow/mark_notif.php?id=<?php echo $row['id']; ?>&link=<?php echo urlencode($row['link']); ?>">
-                                                View Chat
-                                            </a>
-                                        <?php } elseif($row["seen"] == 1 ) {?>
+                                        <div>
+                                            <small><?php echo $row['created_at']; ?></small>
+                                        </div>
+                                    </div>
 
-                                            <button style="  font-size: 0.9rem; padding: 7px 12px; text-align: center;  background-color: var(--color-dark);  color: white;  margin-top: 5px;  transition: all 300ms ease-in-out;" disabled >Viewed</button>
+                                    <?php if ($row["seen"] == 0 ) { ?>
+                                        <a class="btn btn-sm btn-primary mt-2"
+                                            href="chat-flow/mark_notif.php?id=<?php echo $row['id']; ?>&link=<?php echo urlencode($row['link']); ?>">
+                                            View Chat
+                                        </a>
+                                    <?php } elseif($row["seen"] == 1 ) {?>
 
-                                        <?php }?>
+                                        <button style="  font-size: 0.9rem; padding: 7px 12px; text-align: center;  background-color: var(--color-dark);  color: white;  margin-top: 5px;  transition: all 300ms ease-in-out;" disabled >Viewed</button>
 
-                                    </li>
-                                <?php endwhile; ?>
-                            </ul>
+                                    <?php }?>
 
-                        </div>
+                                </li>
+                            <?php endwhile; ?>
+                        </ul>
 
                     </div>
 
                 </div>
-
 
 
                 
@@ -182,7 +184,8 @@ if ($_SESSION["role"] == 2) {?>
         </div>
 
 
-        
+    <script src="th_notification.js"></script>
+
     </body>
     </html>
 

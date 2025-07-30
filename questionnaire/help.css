@@ -45,13 +45,9 @@ body{
     width: 96% !important;
     margin: 0 auto !important;
     gap: 1.8rem !important;
-    grid-template-columns: 17rem auto !important;
+    grid-template-columns: 12rem auto !important;
 }
 
-
-.logo-span{
-    color: var(--pink);
-}
 
 a{
     color: var(--font-black);
@@ -72,7 +68,7 @@ h2{
 }
 
 h3{
-    font-size: 0.97rem;
+    font-size: 0.8rem;
 }
 
 h4{
@@ -88,8 +84,8 @@ small{
 }
 
 .profile-photo{
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 2.6rem;
+    height: 2.6rem;
     border-radius: 50%;
     overflow: hidden !important;
 }
@@ -111,6 +107,30 @@ aside{
     height: 100vh !important;
 }
 
+.logo-span{
+    color: var(--pink);
+}
+
+.logo h2{
+    font-size: 0.8rem;
+}
+
+.menu{
+    display: none;
+    padding-left: 20px !important;
+}
+
+.menu button{
+    background-color: transparent;
+}
+
+.menu span{
+    font-size: 2.5rem;
+}
+
+
+
+
 
 
 aside .top{
@@ -126,17 +146,19 @@ aside .logo{
     gap: 0.8rem !important;
     align-items: center !important;
     justify-content: center !important;
+    margin-left: 12px;
+    margin-top: 12px;
 }
 
 aside .logo h2{
     color: var(--color-dark);
     font-weight: 900;
-    font-size: 1.55rem;
+    font-size: 1.2rem;
 }
 
 aside .logo img{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 aside .close{
@@ -177,6 +199,7 @@ aside .sidebar a:last-child{
     bottom: 4rem !important;
     width: 100% !important;
     color: var(--pink);
+    
 }
 
 aside .sidebar a:last-child h3{
@@ -193,7 +216,7 @@ aside .sidebar a:hover span{
 
 aside .sidebar a.active{
     background: var(--color-light);
-    color: var(--pink);
+    color: var(--color-dark);
     margin-left: 0 !important;
 }
 
@@ -201,11 +224,11 @@ aside .sidebar a.active::before{
     content: '' !important;
     width: 6px !important;
     height: 100% !important;
-    background-color: var(--pink);
+    background-color: var(--color-dark);
 }
 
 aside .sidebar a.active span{
-    color: var(--pink);
+    color: var(--color-dark);
     margin-left: calc(1rem - 3px) !important;
 }
 
@@ -230,7 +253,7 @@ main{
     display: grid !important;
     width: 100% !important;
     margin: 0 auto !important;
-    grid-template-rows: 8rem auto !important;
+    grid-template-rows: 6rem auto !important;
 }
 
 .main_head{
@@ -250,7 +273,7 @@ main{
 
 .profile_info p{
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 
 }
 
@@ -262,7 +285,7 @@ main{
 
 
 .main_head .cta_button a p{
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     color: white;
     font-weight: 500;
     font-family: "Comfortaa", sans-serif;
@@ -281,8 +304,8 @@ main{
     gap: 12px;
     padding: 8px;
     border-radius: 18px;
-    height: 3rem;
-    width: 16rem;
+    height: 2.5rem;
+    width: 13rem;
     gap: 10px;
     border: none;
     transition: all 300ms ease-in-out;
@@ -296,8 +319,8 @@ main{
      
 
 
-.hero_cont{
-    width: 97% !important;
+.hero{
+    width: 100% !important;
     height: 97% !important;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     display: flex !important;
@@ -327,30 +350,45 @@ main{
     padding: 20px !important;
     border-radius: 25px !important;
     margin-bottom: 30px !important;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
+    width: 90%;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-check {
   padding: 10px 12px  !important;
-  padding-left: 40px !important ;
+  padding-left: 20px !important ;
   background-color: #f8f9fa; 
   border-radius: 15px !important;
   transition: background 0.3s !important;
-  border: solid 1.5px rgb(57, 55, 55) !important;
+  border: solid 2px rgb(57, 55, 55) !important;
   margin-bottom: 10px !important;
   letter-spacing: 1px !important;
-  width: 300px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 
 .form-check:hover {
   background-color: #fdebf7;
 }
 
+.form-cont{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
 
 .form-check-input {
   width: 20px !important;
   height: 20px !important;
-  border: 1.5px solid rgb(57, 55, 55) !important;
+  border: 2px solid rgb(57, 55, 55) !important;
   border-radius: 50% !important;
   background-color: #fff;
   cursor: pointer !important;
@@ -370,10 +408,15 @@ main{
 .form-check-label {
   margin-left: 8px !important;
   font-weight: 500 !important ;
+  font-size: 0.85rem;
   cursor: pointer;
 }
 
-
+.error-msg{
+    text-align: center;
+    color: red;
+    padding-top: 26px;
+}
 
 
 .submit_btn {background-image: linear-gradient(to right, rgb(218, 51, 131) 0%, #f09ad4  51%, rgb(218, 51, 131)  100%)}
@@ -382,7 +425,7 @@ main{
   align-items: center !important;
   justify-content: center !important;
   border: none!important;
-  font-size: 1.3rem !important;
+  font-size: 1rem !important;
   color: white !important;
   padding: 10px 10px !important;
   border-radius: 25px !important;
@@ -413,194 +456,133 @@ main{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* 
-    :root{
-        --primary: #E0E1DD;
-        --secondary: #0D1B2A ;
-        --dark: #1B263B;
-        --light: #5d738f;
-        --mid: #1B263B;
-        --green: rgb(22, 147, 68);
+@media screen and (max-width: 1200px){
+    .containerss{
+        width: 96% !important;
+        grid-template-columns: 5rem auto !important;
     }
 
-    body, html {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    font-family: "Comfortaa", sans-serif;
-    position: relative;
-    z-index: 0;
-    overflow-x: hidden;
+    aside .logo{
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0 !important ;
     }
 
-
-    @keyframes expandWave {
-    0% {
-        transform: translateX(-50%) scale(0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(-50%) scale(1);
-        opacity: 1;
-    }
+    aside .logo  h2 {
+        display: none !important;
     }
 
+    aside .sidebar h3{
+        display: none !important;
+    }
 
-    .navbar {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    font-size: 1.1rem;
-    background-color: white !important ;
-    background: white !important; 
-    box-shadow: 0 3px 8px 0 var(--light);
-    border: none;
-    animation: IntFromTop 1s ease-out forwards;
-    animation-delay: 0.3s;
+    aside .sidebar a{
+        width: 5.6rem !important;
+    }
+
+}
+
+
+
+@media screen and (max-width: 758px){
+
+    .containerss{
+        width: 100% !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    @keyframes showMenu{
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
     }
 
 
-    .navbar-brand{
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 5px;
+    aside.showMenu {
+        animation: showMenu 500ms ease forwards;
+    }
+    
+
+    @keyframes closeMenu{
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
     }
 
-    .navbar-brand img {
-    width: 30px !important;
-    height: auto;
+    .cta_button{
+        display: none !important;
     }
 
-    .navbar-brand p{
-    font-family: "Comfortaa", sans-serif;
-    color: black !important;
-    letter-spacing: 3px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    padding-top: 12px;
-    margin-left: 10px;
-    }
-
-
-    .urgent{
-        color: white ;
-        font-weight: 500;
-        background: linear-gradient(71deg,rgb(218, 99, 158) 0%, rgb(218, 51, 131) 100%);
-        padding: 5px 20px !important;
-        margin-right: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        border-radius: 50px;
-        transition: all 300ms ease-in-out !important;
-    }
-
-    .urgent:hover{
-    color: white;
-    padding: 5px 35px !important;
-    background: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
-    }
-
-    .urgent span{
-    transition: all 300ms ease-in-out !important;
-    }
-
-    .urgent:hover span{
-    transform: rotate(45deg);
-    }
-
-    .urgent_div{
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 10px;
-    }
-
-    .urgent_div p {
-    color: white;
-    font-size: 1.3rem !important;
-    letter-spacing: 1px;
-    margin: 0;
-    line-height: 1;
-    }
-
-    .login{
-    border: solid 2px rgb(194, 26, 107);
-    font-size: 1rem !important;
-    padding: 0.2rem 1rem;
-    transition: all 300ms ease-in-out !important;
-    }
-
-    .signup{
-    border: solid 2px rgb(194, 26, 107);
-    font-size: 1rem !important;
-    padding: 0.2rem 1rem;
-    transition: all 300ms ease-in-out !important;
-    }
-
-    .login:hover{
-    background: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
-    color: white;
-    padding: 0.2rem 2rem;
-    }
-
-    .signup:hover{
-    background: linear-gradient(180deg,rgb(203, 60, 131) 0%, rgb(194, 26, 107) 100%);
-    color: white;
-    padding: 0.2rem 2rem;
+    .menu{
+        display: block !important;
     }
 
 
-
-    .white{
-    background-color: rgba(255, 255, 255, 0.9);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
-    }
-
-    .hands {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -3;
-    }
-
-    .hands img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -3;
+    aside.closeMenu{
+        animation: closeMenu 500ms ease forwards;
     }
 
 
+    aside{
+        position: fixed !important;
+        background-color: var(--color-white) !important ;
+        width: 18rem !important;
+        z-index: 3 !important;
+        box-shadow: 1rem 3rem 4rem var(--color-light) !important;
+        height: 100vh !important;
+        padding-right: var(--card-padding) !important;
+        display: none;
+    }
+
+
+    
+
+    aside .logo{
+        margin-left: 1rem !important;
+    }
+
+    aside .logo h2{
+        display: inline !important;
+        padding-left: 8px !important;
+    }
+
+    aside .sidebar h3{
+        display: inline !important;
+    }
+
+    aside .sidebar a{
+        width: 100% !important ;
+        height: 3.4rem !important;
+    }
+
+    aside .close{
+        display: inline-block !important;
+        cursor: pointer !important ;
+        padding-right: 7px !important;
+    }
+
+   
+}
 
 
 
- */
+
+
+
+
+
+
+
+
+
+
+
+
+

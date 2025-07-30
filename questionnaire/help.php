@@ -44,7 +44,7 @@ include "qauth/resolve.php"
                     </div>
 
                     <div class="close" id="closeBtn">
-                        <span class="material-symbols-sharp">close</span>
+                        <span class="material-symbols-outlined">close</span>
                     </div>
                 </div>
                 <!-- Top section of the side bar ending -->
@@ -99,6 +99,12 @@ include "qauth/resolve.php"
                         </a>
                     </div>
 
+                    <div class="menu" id="menuBtn">
+                        <button>
+                            <span class="material-symbols-outlined">segment</span>
+                        </button>
+                    </div>
+
 
                     <div class="profile_info">
 
@@ -117,59 +123,55 @@ include "qauth/resolve.php"
 
                 </div>
                 
-
-                <div class="hero">
                     
-                    <div class="hero_cont">
+                <div class="hero">
 
-                        <section class="home" style="position: relative; overflow: hidden;">
+                    <section class="home" style="position: relative; overflow: hidden;">
 
 
-                            <form action="" method="post" class="container mt-5 p-4 rounded shadow bg-light main_form" style="max-width: 700px;">
-                                <div class="d-flex justify-content-center align-items-center header">
-                                    <h1 class="mb-5 " >Kindly <span>Indicate</span> Category</h1>
-                                </div>
-                                <?php
-                                // Fetch all problems from DB
-                                $problems = $conn->query("SELECT id, issues FROM problems");
-                                ?>
+                        <form action="" method="post" class="container mt-5 p-4 rounded shadow bg-light main_form" style="max-width: 700px;">
+                            <div class="d-flex justify-content-center align-items-center header">
+                                <h1 class="mb-5 " style="text-align: center;" >Kindly <span>Indicate</span> Category</h1>
+                            </div>
+                            <?php
+                            // Fetch all problems from DB
+                            $problems = $conn->query("SELECT id, issues FROM problems");
+                            ?>
 
-                                <div class="mb-4">
+                            <div class="mb-4">
 
-                                    <div class="row">
-                                        <?php while ($issues = $problems->fetch_assoc()): ?>
-                                            <div class="col-md-6">
-                                                <div class="form-check mb-2">
-                                                    <input
-                                                        class="form-check-input"
-                                                        type="checkbox"
-                                                        name="problems[]"
-                                                        value="<?php echo $issues['id']; ?>"
-                                                        id="problem_<?php echo $issues['id']; ?>">
-                                                    <label
-                                                        class="form-check-label"
-                                                        for="problem_<?php echo $issues['id']; ?>">
-                                                        <?php echo htmlspecialchars($issues['issues']); ?>
-                                                    </label>
-                                                </div>
+                                <div class="row">
+                                    <?php while ($issues = $problems->fetch_assoc()): ?>
+                                        <div class="col-md-6 form-cont">
+                                            <div class="form-check mb-2">
+                                                <input
+                                                    class="form-check-input"
+                                                    type="checkbox"
+                                                    name="problems[]"
+                                                    value="<?php echo $issues['id']; ?>"
+                                                    id="problem_<?php echo $issues['id']; ?>">
+                                                <label
+                                                    class="form-check-label"
+                                                    for="problem_<?php echo $issues['id']; ?>">
+                                                    <?php echo htmlspecialchars($issues['issues']); ?>
+                                                </label>
                                             </div>
-                                        <?php endwhile; ?>
-                                    </div>
-                                    <p class="text-danger mt-1 t"><?php echo $errors['problems']; ?></p>
+                                        </div>
+                                    <?php endwhile; ?>
                                 </div>
+                                <p class="t error-msg"><?php echo $errors['problems']; ?></p>
+                            </div>
 
-                                <button type="submit" name="special" class="btn btn-primary w-100 submit_btn">
-                                    Submit Application
-                                    <span class="material-symbols-outlined">keyboard_capslock</span>
-                                </button>
+                            <button type="submit" name="special" class="btn btn-primary w-100 submit_btn">
+                                Submit Application
+                                <span class="material-symbols-outlined">keyboard_capslock</span>
+                            </button>
 
-                            </form>
-
-
-                        </section>
+                        </form>
 
 
-                    </div>
+                    </section>
+
 
                 </div>
 

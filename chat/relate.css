@@ -1,5 +1,6 @@
 :root{
     --light-pink: #c9608e;
+    --pink: #bd3470;
     --dark-pink: #80316e;
     --color-white: #ffffff;
     --font-black: #323842;
@@ -13,7 +14,7 @@
 
     --green: rgb(22, 147, 68);
     --blue: #0ea5e9;
-    --pink: #e64f93;
+    --pink: #db2777;
 
     --pop: 'Poppins', sans-serif;
 }
@@ -45,13 +46,10 @@ body{
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 17rem auto;
+    grid-template-columns: 12rem auto;
 }
 
 
-.logo-span{
-    color: var(--pink);
-}
 
 a{
     color: var(--font-black);
@@ -72,7 +70,7 @@ h2{
 }
 
 h3{
-    font-size: 0.97rem;
+    font-size: 0.8rem;
 }
 
 h4{
@@ -88,8 +86,8 @@ small{
 }
 
 .profile-photo{
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 2.6rem;
+    height: 2.6em;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -104,6 +102,14 @@ p{
 
 b{
     color: var(--color-dark);
+}
+
+.logo-span{
+    color: var(--pink);
+}
+
+.logo h2{
+    font-size: 0.8rem;
 }
  
 
@@ -137,17 +143,19 @@ aside .logo{
     gap: 0.8rem;
     align-items: center;
     justify-content: center;
+    margin-left: 12px;
+    margin-top: 12px;
 }
 
 aside .logo h2{
     color: var(--color-dark);
     font-weight: 900;
-    font-size: 1.55rem;
+    font-size: 1.2rem;
 }
 
 aside .logo img{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 aside .close{
@@ -179,7 +187,7 @@ aside .sidebar a{
 }
 
 aside .sidebar a span{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     transition: all 300ms ease;
 }
 
@@ -212,11 +220,11 @@ aside .sidebar a.active::before{
     content: '';
     width: 6px;
     height: 100%;
-    background-color: var(--pink);
+    background-color: var(--color-dark);
 }
 
 aside .sidebar a.active span{
-    color: var(--pink);
+    color: var(--color-dark);
     margin-left: calc(1rem - 3px);
 }
 
@@ -241,7 +249,7 @@ main{
     display: grid;
     width: 100%;
     margin: 0 auto;
-    grid-template-rows: 8rem auto;
+    grid-template-rows: 6rem auto;
 }
 
 .main_head{
@@ -261,7 +269,7 @@ main{
 
 .profile_info p{
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 
 }
 
@@ -271,20 +279,8 @@ main{
     margin-left: -7px;
 }
 
-.main_head .cta_button a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    padding: 8px;
-    border-radius: 18px;
-    height: 3.8rem;
-    width: 17rem;
-    text-decoration: none;
-}
-
 .main_head .cta_button a p{
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     color: white;
     font-weight: 500;
     font-family: "Comfortaa", sans-serif;
@@ -303,8 +299,8 @@ main{
     gap: 12px;
     padding: 8px;
     border-radius: 18px;
-    height: 3rem;
-    width: 16rem;
+    height: 2.5rem;
+    width: 13rem;
     gap: 10px;
     border: none;
     transition: all 300ms ease-in-out;
@@ -316,26 +312,32 @@ main{
     background-position: right center; 
 }
      
-
-.hero_cont{
-    width: 97%;
+.hero{
     height: 97%;
+    width: 100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    display: flex;
-    padding: 40px;
+    padding: 30px;
+    scroll-behavior: smooth;
+    max-height: 100vh;        /* Limit the height to the viewport */
+    overflow-y: auto;         /* Enable vertical scrolling */
+    padding-bottom: 5rem;  
     flex-direction: column;
-    /* background: radial-gradient(circle,#caaee5 0%, #fc9bc8 100%); */
+
+}
+
+
+.hero .des{
+    padding-bottom: 25px;
+    padding-top: 15px;
+    text-align: center;
+    font-family: var(--pop);
+    line-height: 28px;
+    font-weight: 600;
 }
 
 .country{
     margin-bottom: 3px;
 }
-
-.therapist-name{
-    margin-bottom: 5px;
-    font-family: var(--pop);
-}
-
 
 .profile-card {
     border: 1px solid #ccc;
@@ -375,10 +377,15 @@ main{
     margin-left: 15px;
 }
 
+.therapist-info p{
+    font-size: 0.9rem;
+}
+
 .therapist-name {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 5px;
+    font-family: var(--pop);
 }
 
 .connect-btn {
@@ -414,10 +421,45 @@ main{
 
 
 
+.hero::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hero::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 10px;
+}
+
+.hero {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+}
+
+
+
+.hero::-webkit-scrollbar-track {
+  background: #f0f0f0; /* light grey track */
+  border-radius: 4px;
+}
+
+
+
+.hero::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.hero {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: #888 #f0f0f0;  /* thumb color | track color */
+}
+
+
+
+
 @media screen and (max-width: 1200px){
     .container{
         width: 96%;
-        grid-template-columns: 7rem auto;
+        grid-template-columns: 5rem auto;
     }
 
     aside .logo{
@@ -529,6 +571,56 @@ main{
 
    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

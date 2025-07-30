@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // Click ripple interaction
@@ -45,59 +46,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Respect user motion preferences
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Respect user motion preferences and screen size
+    // const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // const isMobile = window.innerWidth < 1025; // Mobile cutoff
 
-    if (!prefersReducedMotion) {
-    gsap.registerPlugin(ScrollTrigger);
+    // if (!prefersReducedMotion && !isMobile) {
+    // gsap.registerPlugin(ScrollTrigger);
 
-    document.querySelectorAll("[data-animate]").forEach((el) => {
-        const animationType = el.dataset.animate;
-        let fromVars = { opacity: 0 };
+    // document.querySelectorAll("[data-animate]").forEach((el) => {
+    //     const animationType = el.dataset.animate;
+    //     let fromVars = { opacity: 0 };
 
-        // Choose direction based on animation type
-        switch (animationType) {
+    //     // Choose direction based on animation type
+    //     switch (animationType) {
+    //     case "fade-up":
+    //         fromVars.y = 60;
+    //         fromVars.autoAlpha = 0;
+    //         break;
+    //     case "fade-down":
+    //         fromVars.y = -30;
+    //         break;
+    //     case "slide-left":
+    //         fromVars.x = -100;
+    //         break;
+    //     case "slide-right":
+    //         fromVars.x = 100;
+    //         break;
+    //     default:
+    //         break;
+    //     }
 
-        case "fade-up":
-            fromVars.y = 60;        
-            fromVars.autoAlpha = 0; 
-            break;
+    //     // Check if it belongs to a group that should stagger
+    //     const isStaggerGroup =
+    //     el.classList.contains("case-box") ||
+    //     el.parentElement?.classList.contains("stat");
 
-        case "fade-down":
-            fromVars.y = -30;
-            break;
+    //     // Animate element with optional stagger
+    //     gsap.from(el, {
+    //     ...fromVars,
+    //     duration: 1,
+    //     autoAlpha: 0,
+    //     ease: "power2.out",
+    //     stagger: isStaggerGroup ? 0.2 : 0,
+    //     scrollTrigger: {
+    //         trigger: el,
+    //         start: "top 85%",
+    //         toggleActions: "play none none reset",
+    //     }
+    //     });
+    // });
+    // }
 
-        case "slide-left":
-            fromVars.x = -100;
-            break;
-
-        case "slide-right":
-            fromVars.x = 100;
-            break;
-
-        default:
-            break;
-        }
-
-        // Check if it belongs to a group that should stagger
-        const isStaggerGroup =
-        el.classList.contains("case-box") ||
-        el.parentElement?.classList.contains("stat");
-
-        // Animate element with optional stagger
-        gsap.from(el, {
-        ...fromVars,
-        duration: 1,
-        autoAlpha: 0,
-        ease: "power2.out",
-        stagger: isStaggerGroup ? 0.2 : 0,
-        scrollTrigger: {
-            trigger: el,
-            start: "top 85%",
-            toggleActions: "play none none reset", // re-animate on re-enter
-        }
-        });
-    });
-    }
 
 
 

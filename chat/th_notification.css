@@ -31,14 +31,14 @@
     box-sizing: border-box;
 }
 
+
 body{
     font-family: "Comfortaa", sans-serif;
     width: 100vw;
     height: 100vh;
     background: #e6e6eb;
     overflow: hidden;
-    color: #262626;
-    
+    color: #262626;    
 }
 
 .container{
@@ -46,13 +46,10 @@ body{
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 17rem auto;
+    grid-template-columns: 12rem auto;
 }
 
 
-.logo-span{
-    color: var(--pink);
-}
 
 a{
     color: var(--font-black);
@@ -63,13 +60,17 @@ img{
     width: 100%;
 }
 
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
 
 h2{
     font-size: 1.4rem;
 }
 
 h3{
-    font-size: 0.97rem;
+    font-size: 0.8rem;
 }
 
 h4{
@@ -85,8 +86,8 @@ small{
 }
 
 .profile-photo{
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 2.6rem;
+    height: 2.6em;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -102,13 +103,32 @@ p{
 b{
     color: var(--color-dark);
 }
+
+.logo-span{
+    color: var(--pink);
+}
+
+.logo h2{
+    font-size: 0.8rem;
+}
  
 
 aside{
     height: 100vh;
 }
 
+.menu{
+    display: none;
+    padding-left: 20px;
+}
 
+.menu button{
+    background-color: transparent;
+}
+
+.menu span{
+    font-size: 2.5rem;
+}
 
 aside .top{
     display: flex;
@@ -123,17 +143,19 @@ aside .logo{
     gap: 0.8rem;
     align-items: center;
     justify-content: center;
+    margin-left: 12px;
+    margin-top: 12px;
 }
 
 aside .logo h2{
     color: var(--color-dark);
     font-weight: 900;
-    font-size: 1.55rem;
+    font-size: 1.2rem;
 }
 
 aside .logo img{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 aside .close{
@@ -165,7 +187,7 @@ aside .sidebar a{
 }
 
 aside .sidebar a span{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     transition: all 300ms ease;
 }
 
@@ -227,7 +249,7 @@ main{
     display: grid;
     width: 100%;
     margin: 0 auto;
-    grid-template-rows: 8rem auto;
+    grid-template-rows: 6rem auto;
 }
 
 .main_head{
@@ -247,7 +269,7 @@ main{
 
 .profile_info p{
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 
 }
 
@@ -259,7 +281,8 @@ main{
 
      
 
-.hero_cont{
+
+/* .hero{
     width: 100%;
     height: 100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -267,12 +290,10 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
-    /* background: radial-gradient(circle,#caaee5 0%, #fc9bc8 100%); */
 }
 
-.hero_cont .title{
-    height: 15%;
+.hero .title{
+    height: 30px;
     width: 100%;
     padding: 20px 35px;
     display: flex;
@@ -280,29 +301,76 @@ main{
     justify-content: space-between;
 }
 
-.hero_cont .title h1 span{
+.hero .title h1 span{
     color: var(--pink);
 }
 
-.hero_cont .title h1{
+.hero .title h1{
     font-weight: 800;
     font-family: var(--pop);
 }
 
 
-.hero_cont .content{
-    height: 85%;
+.hero .content{
+    height: 90%;
     width: 100%;
     padding: 30px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    background-color: red;
+} */
+
+    
+.hero{
+    height: 97%;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    padding: 30px 7px;
+    scroll-behavior: smooth;
+    max-height: 100vh;        /* Limit the height to the viewport */
+    overflow: hidden;      /* Enable vertical scrolling */
+    padding-bottom: 5rem;  
+
+    background-image: url(../images/cloud.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
+
+
+.hero .title{
+    height: 30px;
+    width: 100%;
+    padding: 20px 35px 30px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .title h1 span{
+    color: var(--pink);
+}
+
+.hero .title h1{
+    font-weight: 700;
+    font-size: 1.4rem;
+    font-family: var(--pop);
+}
+
+
+.hero .content{
+    height: 100%;
+    width: 100%;
+    padding: 0 30px 30px 30px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+} 
+
 
 .drop_form{
     position: relative;
 }
-
-
-
-
 
 
 
@@ -375,6 +443,12 @@ main{
     letter-spacing: 2px;
 }
 
+.notif_content div{
+    font-size: 0.8rem;
+}
+
+
+
 @media (max-width: 576px) {
   .list-group-item {
     padding: 0.8rem;
@@ -438,6 +512,171 @@ main{
     font-size: 0.95rem;
   }
 }
+
+
+
+.hero .content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hero .content::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 10px;
+}
+
+.hero .content {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+}
+
+
+
+.hero .content::-webkit-scrollbar-track {
+  background: #f0f0f0; /* light grey track */
+  border-radius: 4px;
+}
+
+
+
+.hero .content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.hero .content {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: #888 #f0f0f0;  /* thumb color | track color */
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+    .container{
+        width: 96%;
+        grid-template-columns: 5rem auto;
+    }
+
+    aside .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    aside .logo  h2 {
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 758px){
+
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    @keyframes showMenu{
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+
+    aside.showMenu {
+        animation: showMenu 500ms ease forwards;
+    }
+    
+
+    @keyframes closeMenu{
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .cta_button{
+        display: none;
+    }
+
+    .menu{
+        display: block;
+    }
+
+
+    aside.closeMenu{
+        animation: closeMenu 500ms ease forwards;
+    }
+
+
+    aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        display: none;
+    }
+
+
+    
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2{
+        display: inline;
+        padding-left: 8px;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .close{
+        display: inline-block;
+        cursor: pointer;
+        padding-right: 7px;
+    }
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

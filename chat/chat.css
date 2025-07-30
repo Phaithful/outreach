@@ -29,6 +29,8 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 body{
@@ -38,7 +40,6 @@ body{
     background: #e6e6eb;
     overflow: hidden;
     color: #262626;
-    position: relative;
     
 }
 
@@ -47,13 +48,10 @@ body{
     width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 17rem auto;
+    grid-template-columns: 12rem auto;
 }
 
 
-.logo-span{
-    color: var(--pink);
-}
 
 a{
     color: var(--font-black);
@@ -64,13 +62,17 @@ img{
     width: 100%;
 }
 
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
 
 h2{
     font-size: 1.4rem;
 }
 
 h3{
-    font-size: 0.97rem;
+    font-size: 0.8rem;
 }
 
 h4{
@@ -86,8 +88,8 @@ small{
 }
 
 .profile-photo{
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 2.6rem;
+    height: 2.6em;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -103,13 +105,32 @@ p{
 b{
     color: var(--color-dark);
 }
+
+.logo-span{
+    color: var(--pink);
+}
+
+.logo h2{
+    font-size: 0.8rem;
+}
  
 
 aside{
     height: 100vh;
 }
 
+.menu{
+    display: none;
+    padding-left: 20px;
+}
 
+.menu button{
+    background-color: transparent;
+}
+
+.menu span{
+    font-size: 2.5rem;
+}
 
 aside .top{
     display: flex;
@@ -124,17 +145,19 @@ aside .logo{
     gap: 0.8rem;
     align-items: center;
     justify-content: center;
+    margin-left: 12px;
+    margin-top: 12px;
 }
 
 aside .logo h2{
     color: var(--color-dark);
     font-weight: 900;
-    font-size: 1.55rem;
+    font-size: 1.2rem;
 }
 
 aside .logo img{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 aside .close{
@@ -166,7 +189,7 @@ aside .sidebar a{
 }
 
 aside .sidebar a span{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     transition: all 300ms ease;
 }
 
@@ -228,7 +251,7 @@ main{
     display: grid;
     width: 100%;
     margin: 0 auto;
-    grid-template-rows: 8rem auto;
+    grid-template-rows: 6rem auto;
 }
 
 .main_head{
@@ -248,7 +271,7 @@ main{
 
 .profile_info p{
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 
 }
 
@@ -258,9 +281,42 @@ main{
     margin-left: -7px;
 }
 
+.main_head .cta_button a p{
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 500;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.main_head .cta_button a span{
+    color: white;
+}
+
+
+.main_head .cta_button a {background-image: linear-gradient(to right, rgb(198, 30, 111) 0%, #e463ac  51%, rgb(198, 30, 111)  100%)}
+.main_head .cta_button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 18px;
+    height: 2.5rem;
+    width: 13rem;
+    gap: 10px;
+    border: none;
+    transition: all 300ms ease-in-out;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.main_head .cta_button a:hover {
+    background-position: right center; 
+}
      
 
-.hero_cont{
+
+.hero{
     width: 100%;
     height: 100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -269,68 +325,178 @@ main{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-image: url(../images/cloudss.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
     /* background: radial-gradient(circle,#caaee5 0%, #fc9bc8 100%); */
 }
 
-.hero_cont .title{
-    width: 100%;
-    padding: 0px 35px;
+.hero .title{
+    width: 97%;
+    padding: 5px 20px;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 11px;
+    gap: 5px;
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+    backdrop-filter: blur(12px);          /* frosted glass blur */
+    -webkit-backdrop-filter: blur(12px);  /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: white;                         /* or dark if your blur background is light */
 }
 
-.hero_cont .title h1 span{
+.block1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.chat-intro{
+    font-family: var(--pop);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.chat-intro span{
     color: var(--pink);
 }
 
-.hero_cont .title h1{
-    font-weight: 800;
-    font-family: var(--pop);
+
+.hero .title h1{
+    font-weight: 900;
+    font-size: 1.05rem;
     padding-left: 8px;
+    color: var(--font-black);
 }
 
-.hero_cont .title button{
-    padding: 5px 25px;
-    background-color: var(--font-black);
+.hero .title .end{
+    padding: 10px 25px;
+    background-color: #bb1d1d;
     color: white;
-    border-radius: 18px;
-    margin-top: 8px;
+    border-radius: 8px;
     cursor: pointer;
+    font-family: "Comfortaa", sans-serif;
+    transition: all 300ms ease-in-out;
+}    
+
+.hero .title .end:hover{
+    background-color: #df2f2f;
 }
 
-.hero_cont .content{
+
+.end2{
+    padding: 10px 25px;
+    background-color: #bb1d1d;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Comfortaa", sans-serif;
+    transition: all 300ms ease-in-out;
+    display: none;
+}    
+
+.end2:hover{
+    background-color: #df2f2f;
+}
+
+
+.profile-hr{
+    width: 95%;
+    height: 1px;
+    background-color: var(--font-black);
+    margin: 7px;
+    display: none;
+}
+
+
+.hero .content{
     height: 90%;
     width: 100%;
     padding: 0 20px;
 }
 
-.hero_cont .content {
+.hero .content {
     display: flex;
     flex-direction: column;
 }
 
-.hero_cont .content .container{
+.hero .content .container{
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
+}
+
+
+.title-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    background-color: var(--font-black);
+    padding: 6px 12px;
+    border-radius: 8px;
+    
+}
+
+
+.title-btn div{
+    width: 1px;
+    height: 30px;
+    background-color: white;
+    margin: 0 8px;
+}
+
+.title-btn button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0 8px;
+    transition: all 300ms ease-in-out;
+}
+
+.title-btn button:hover span{
+    color: #c0cde3;
+}
+
+.title-btn button span{
+    font-size: 1.4rem;
+    color: white;
+    transition: all 300ms ease-in-out;
 }
 
 
 .chat{
     height: 100%;
+    width: 100%;
     overflow: hidden;
     position: relative;
-    background-image: url(../images/chat_bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
+    backdrop-filter: blur(8px);          /* frosted glass blur */
+    -webkit-backdrop-filter: blur(12px);  /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: white;  
+    
 }
 
 
 #chat-form{
     display: flex;
-    height: 50px;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    margin-bottom: 10px;
     width: 100%;
     padding: 0 3px;
     background-color: white;
@@ -340,24 +506,39 @@ main{
 
 #chat-form input{
     height: 40px;
-    width: 90%;
+    width: 92%;
     padding: 0 15px;
     background-color: transparent;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 0.9rem;
+    color: var(--font-black);
 }
 
 
 #chat-form button{
-    width: 2%;
+    width: 5%;
     background-color: transparent;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-59%);
-    right: 25px;
+    border: none;
     cursor: pointer;
+}
+
+#chat-form button:hover span{
+    color: var(--pink);
 }
 
 #chat-form button span{
     font-size: 1.7rem;
+    color: var(--font-black);
+    transition: all 300ms ease-in-out;
+}
+
+#emoji-button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 3%;
+  background-color: transparent;
 }
 
 
@@ -372,7 +553,48 @@ main{
     position: absolute;
     bottom: 50px;
     padding-top: 80px;
+    scroll-behavior: smooth;
+    border: none;
 }
+
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 10px;
+}
+
+.chat-box {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+}
+
+
+
+.chat-box::-webkit-scrollbar-track {
+  background: #f0f0f0; /* light grey track */
+  border-radius: 4px;
+}
+
+
+
+.chat-boxo::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.chat-box {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: #888 #f0f0f0;  /* thumb color | track color */
+}
+
+
+
+
+
+
+
 
 .chat-bubble {
     max-width: 70%;
@@ -398,25 +620,11 @@ main{
 }
 
 
-
-.menu{
-    display: none;
-    padding-left: 20px;
+.chat-profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.menu button{
-    background-color: transparent;
-}
-
-.menu span{
-    font-size: 2.5rem;
-}
-
-
-
-
-
-
 
 
 
@@ -425,7 +633,7 @@ main{
 @media screen and (max-width: 1200px){
     .container{
         width: 96%;
-        grid-template-columns: 7rem auto;
+        grid-template-columns: 5rem auto;
     }
 
     aside .logo{
@@ -453,6 +661,10 @@ main{
 
 
 @media screen and (max-width: 758px){
+
+    .chat-intro{
+        display: none;
+    }
 
     .container{
         width: 100%;
@@ -535,7 +747,104 @@ main{
         padding-right: 7px;
     }
 
+    .hero{
+        height: 90vh;
+    }
+
+    #chat-form input{
+        width: 90%;
+
+    }
+
+
+    #chat-form button{
+        width: 10%;
+
+    }
+
+    .hero .title .end{
+        display: none;
+    } 
+
+    .end2{
+        display: block;
+    } 
+
+    .profile-hr{
+        width: 95%;
+        height: 1px;
+        background-color: var(--font-black);
+        margin: 4px;
+        display: block;
+    }
+
+    main{
+        grid-template-rows: 4rem auto;
+    }
+
+    .hero .title{
+        padding: 10px 10px;
+    }
+
    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

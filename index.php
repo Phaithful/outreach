@@ -70,7 +70,7 @@
 
 
     
-    <div id="ripple-effect"></div>
+    
 
 
     <!-- signup modal -->
@@ -109,18 +109,19 @@
     
 
     <section class="home" style="position: relative; overflow: hidden;">
+
+
+        <div id="ripple-effect"></div>
+
+
         <div class="hands">
             <div class="white"></div>
             <img src="images/hands1.png" alt="">
         </div>
 
-        <div class="mobile-circles circle1">
-             
-        </div>
+        <div class="mobile-circles circle1"></div>
 
-        <div class="mobile-circles circle2">
-             
-        </div>
+        <div class="mobile-circles circle2"></div>
 
         
 
@@ -152,7 +153,7 @@
 
                 <button class="btn urgent" id="urgentBtn" type="button">
                     <span class="material-symbols-outlined">call</span>
-                    <p>Talk to a Therapist</p>
+                    <p>Talk to Someone</p>
                 </button>
             </div>
         </div>
@@ -688,8 +689,9 @@
     <!-- External libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    
 
     <!-- Your custom script -->
     <script src="assets/js/script.js"></script>

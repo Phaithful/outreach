@@ -106,6 +106,7 @@
                     </div>
 
 
+
                     <div class="profile_info">
 
                         <div class="profile-photo">
@@ -124,48 +125,46 @@
                 </div>
                 
 
+                    
                 <div class="hero">
                     
-                    <div class="hero_cont">
-                        
-                        <h2 style="margin-bottom: 18px;">Therapists Who Can Help You</h2>
-                        <div class="list">
+                    <h2 class="des">Connect with a Therapist Who Understands</h2>
+                    <div class="list">
 
-                            <div class="row">
-                                <div class="profile-container">
-                                    <?php if (!empty($therapists)): ?>
-                                        <?php foreach ($therapists as $therapist): ?>
-                                            <div class="profile-card">
-                                                <div class="details">
-                                                    <img src="avatar.png" alt="profile" class="profile-img">
-                                                    <div class="name">
-                                                        <div class="therapist-info">
+                        <div class="row">
+                            <div class="profile-container">
+                                <?php if (!empty($therapists)): ?>
+                                    <?php foreach ($therapists as $therapist): ?>
+                                        <div class="profile-card">
+                                            <div class="details">
+                                                <img src="avatar.png" alt="profile" class="profile-img">
+                                                <div class="name">
+                                                    <div class="therapist-info">
                                                         <div class="therapist-name"><?php echo htmlspecialchars($therapist['full_name']); ?></div>
-                                                            <p class="text-muted mb-1 country">Country: <?php echo htmlspecialchars($therapist['country']); ?></p>
-                                                            <p class="text-muted mb-0">Name Tag: <strong>@<?php echo htmlspecialchars($therapist['name_tag']); ?></strong></p>
-                                                        </div>
-                                                    </div>             
-                                                </div>
-                                                <form action="" method="post">
-                                                    <input type="hidden" name="tuser_id" value="<?php echo htmlspecialchars($therapist['user_id']); ?>">
-                                                    <input type="hidden" name="tuser_name" value="<?php echo htmlspecialchars($therapist['name_tag']); ?>">
-                                                    <button type="submit" class="btn btn-primary w-100 connect-btn">Connect</button>
-                                                </form>
+                                                        <p class="text-muted mb-1 country">Country: <?php echo htmlspecialchars($therapist['country']); ?></p>
+                                                        <p class="text-muted mb-0">ID: <strong><?php echo htmlspecialchars($therapist['name_tag']); ?></strong></p>
+                                                    </div>
+                                                </div>             
                                             </div>
-                                        
-                                        <?php endforeach; ?>
-                                    <?php else: ?>
-                                </div>
-                                    <div class="col-12">
-                                        <p class="text-danger">No therapists are currently available for this problem.</p>
-                                    </div>
-                                <?php endif; ?>
+                                            <form action="" method="post">
+                                                <input type="hidden" name="tuser_id" value="<?php echo htmlspecialchars($therapist['user_id']); ?>">
+                                                <input type="hidden" name="tuser_name" value="<?php echo htmlspecialchars($therapist['name_tag']); ?>">
+                                                <button type="submit" class="btn btn-primary w-100 connect-btn">Connect</button>
+                                            </form>
+                                        </div>
+                                    
+                                    <?php endforeach; ?>
+                                <?php else: ?>
                             </div>
+                                <div class="col-12">
+                                    <p class="text-danger">No therapists are currently available for this problem.</p>
+                                </div>
+                            <?php endif; ?>
                         </div>
-
                     </div>
 
                 </div>
+
 
 
 
@@ -176,7 +175,7 @@
 
         </div>
 
-    <script src="assets/js/victim.js"></script>
+    <script src="relate.js"></script>
         
     </body>
 
