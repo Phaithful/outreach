@@ -186,7 +186,7 @@ session_start();
 
 
 <?php } else{
-    header("../plogin.php");
+    header("location: ../plogin.php");
     }
     
 ?>

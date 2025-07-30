@@ -477,7 +477,7 @@ main{
 .chat{
     height: 100%;
     width: 100%;
-    overflow: hidden;
+
     position: relative;
 
     background: rgba(255, 255, 255, 0.1); /* semi-transparent background */
@@ -662,6 +662,8 @@ main{
 
 @media screen and (max-width: 758px){
 
+
+
     .chat-intro{
         display: none;
     }
@@ -678,6 +680,21 @@ main{
         to {
             transform: translateX(0);
         }
+    }
+
+    .chat{
+        position: relative;
+        
+    }
+    
+    
+    #chat-form{
+        position: absolute;
+        bottom: 90px;
+    }
+    
+    aside .sidebar a:last-child{
+        bottom: 120px;
     }
 
 

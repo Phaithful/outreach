@@ -188,7 +188,7 @@ session_start();
 
 
 <?php } else{
-    header("../tlogin.php");
+    header("location: ../tlogin.php");
     }
 ?>
 

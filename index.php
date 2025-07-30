@@ -96,12 +96,12 @@
         <div class="modal_content">
             <div class="as_school">
                 <img src="images/voice.png" alt="">
-                <a href="psignup.php">Sign in as Voice</a>
+                <a href="psignup.php">Sign up as Voice</a>
             </div>
             <hr>
             <div class="as_professional">
                 <img src="images/listener.png" alt="">
-                <a href="tsignup.php">Sign in as Therapist</a>
+                <a href="tsignup.php">Sign up as Therapist</a>
             </div>
         </div>
         
@@ -535,7 +535,7 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        You’re in full control. You can end the session or switch to a different Therapis whenever you like.
+                        You’re in full control. You can end the session or switch to a different Therapist whenever you like.
                     </div>
                 </div>
             </div>

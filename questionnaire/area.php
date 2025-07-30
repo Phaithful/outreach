@@ -1,5 +1,6 @@
 <?php
-include "qauth/solution.php"
+include "qauth/solution.php";
+echo $_SESSION["user_id"];
 ?>
 
 

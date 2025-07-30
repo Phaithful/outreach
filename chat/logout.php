@@ -1,7 +1,11 @@
 <?php
-session_start();              // Start the session
-session_unset();              // Unset all session variables
-session_destroy();            // Destroy the session
+session_start(); // Start the session
+
+// ✅ Safely get the role before destroying the session
+$role = isset($_SESSION["role"]) ? $_SESSION["role"] : null;
+
+session_unset();     // Unset all session variables
+session_destroy();   // Destroy the session
 
 // Optional: Clear session cookie if set
 if (ini_get("session.use_cookies")) {
@@ -13,10 +17,9 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-// Redirect to login page
-if ($_SESSION["role"] == 2) {
+// ✅ Redirect based on previous role
+if ($role == 2) {
     header("Location: ../tlogin.php");
-}
-else{
+} else {
     header("Location: ../plogin.php");
 }
