@@ -57,11 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" &&  isset($_POST["submit"])) {
         $errors["motivation"] = "Please input phone details";
     }
 
-    if (empty($misconduct)) {
-        $errors["misconduct"] = "Please input phone details";
-    } elseif ($misconduct === "yes") {
-        $errors["misconduct"] = "You Have done misconduct no therapist for you";
-    }
+    // if (empty($misconduct)) {
+    //     $errors["misconduct"] = "Please input phone details";
+    // } elseif ($misconduct === "yes") {
+    //     $errors["misconduct"] = "You Have done misconduct no therapist for you";
+    // }
 
     if (empty($signature)) {
         $errors["signature"] = "Please input phone details";
